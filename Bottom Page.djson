@@ -1,0 +1,48 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "3f6e965b-a460-43b5-8d5a-5ce44cb9590e",
+  "BaseHeight": 205,
+  "BaseWidth": 590,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": []
+  },
+  "SnapToGrid": true,
+  "HideLabels": true,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "Images": {
+    "$id": "3",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "4",
+    "ScreenCount": 10.0,
+    "InGameScreensIndexs": {
+      "$id": "5",
+      "$values": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "IdleScreensIndexs": {
+      "$id": "6",
+      "$values": []
+    },
+    "MainPreviewIndex": -1,
+    "IsOverlay": false
+  },
+  "ShowOnScreenControls": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true
+}
