@@ -1,0 +1,241 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "e691dadc-2f32-446d-aaea-bb87204ec911",
+  "BaseHeight": 60,
+  "BaseWidth": 100,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "IsFreezed": false,
+        "InGameScreen": true,
+        "IdleScreen": false,
+        "BackgroundColor": "#00FFFFFF",
+        "IsSelected": true,
+        "Items": {
+          "$id": "4",
+          "$values": [
+            {
+              "$id": "5",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 60.0,
+              "Text": "D",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 2,
+              "VerticalAlignment": 1,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "6",
+                "AllBorders": 0,
+                "AllCornerRadius": 0,
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "CornerRadius": "0,0,0,0",
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "7"
+                }
+              },
+              "Height": 60.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "Width": 40.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "b6d073bb-1483-4286-82fe-187b42bec6a9",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Letter",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "8",
+                "Text": {
+                  "$id": "9",
+                  "Formula": {
+                    "$id": "10",
+                    "Interpreter": 0,
+                    "Expression": "if(isnull([DataCorePlugin.GameData.NewData.SessionTypeName],'')='RACE',\r\n\r\nif(isnull(timespantoseconds([DataCorePlugin.GameData.NewData.CurrentLapTime]),1)=0,\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentLap]<=1,\r\n\r\nif([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]<5,'R',\r\n\r\nif([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,'A','D')),\r\n\r\nif([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,'A','D')),\r\n\r\nif([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,'A','D')),\r\n\r\nif([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,'A','D'))"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "$id": "11",
+                  "Formula": {
+                    "$id": "12",
+                    "Interpreter": 0,
+                    "Expression": "if([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,1,0)"
+                  },
+                  "StartColor": "#FFFFFFFF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            },
+            {
+              "$id": "13",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 60.0,
+              "Text": "1",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 0,
+              "VerticalAlignment": 1,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "14",
+                "AllBorders": 0,
+                "AllCornerRadius": 0,
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "CornerRadius": "0,0,0,0",
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "15"
+                }
+              },
+              "Height": 60.0,
+              "Left": 40.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "Width": 60.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "b6d073bb-1483-4286-82fe-187b42bec6a9",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "Number",
+              "RenderingSkip": 0,
+              "Sid": 1,
+              "Bindings": {
+                "$id": "16",
+                "Text": {
+                  "$id": "17",
+                  "Formula": {
+                    "$id": "18",
+                    "Interpreter": 0,
+                    "Expression": "if(isnull([DataCorePlugin.GameData.NewData.SessionTypeName],'')='RACE',\r\n\r\nif(isnull(timespantoseconds([DataCorePlugin.GameData.NewData.CurrentLapTime]),1)=0,\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentLap]<=1,\r\n\r\nif([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]<5,'S',\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex]=0,1,[DataCorePlugin.GameData.NewData.CurrentSectorIndex])),\r\n\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex]=0,1,[DataCorePlugin.GameData.NewData.CurrentSectorIndex])),\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex]=0,1,[DataCorePlugin.GameData.NewData.CurrentSectorIndex])),\r\n\r\nif([DataCorePlugin.GameData.NewData.CurrentSectorIndex]=0,1,[DataCorePlugin.GameData.NewData.CurrentSectorIndex]))"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "$id": "19",
+                  "Formula": {
+                    "$id": "20",
+                    "Interpreter": 0,
+                    "Expression": "if([DataCorePlugin.GameData.NewData.OilTemperature]>120 or [DataCorePlugin.GameData.NewData.WaterTemperature]>120 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureFrontRight]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearLeft]>1000 or [DataCorePlugin.GameData.NewData.BrakeTemperatureRearRight]>1000 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureFrontRight]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearLeft]>120 or [DataCorePlugin.GameData.NewData.TyreTemperatureRearRight]>120 or\r\n[DataCorePlugin.GameData.NewData.CarDamage1]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage2]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage3]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage4]>15 or\r\n[DataCorePlugin.GameData.NewData.CarDamage5]>15,1,0)"
+                  },
+                  "StartColor": "#FFFFFFFF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "9961eaf4-bcff-4270-99ed-ce04f8839303",
+        "Name": "Screen1",
+        "RenderingSkip": 0,
+        "Sid": 0,
+        "Bindings": {
+          "$id": "21"
+        }
+      }
+    ]
+  },
+  "SnapToGrid": false,
+  "HideLabels": false,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "SelectedScreen": {
+    "$ref": "3"
+  },
+  "Images": {
+    "$id": "22",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "23",
+    "ScreenCount": 0.0,
+    "MainPreviewIndex": 0
+  }
+}

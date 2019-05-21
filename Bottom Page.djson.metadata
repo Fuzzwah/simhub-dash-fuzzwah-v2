@@ -1,0 +1,11 @@
+{
+  "Category": null,
+  "Title": null,
+  "Description": null,
+  "Author": null,
+  "ScreenCount": 0.0,
+  "InGameScreensIndexs": [],
+  "IdleScreensIndexs": [],
+  "MainPreviewIndex": -1,
+  "IsOverlay": false
+}
