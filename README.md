@@ -25,6 +25,7 @@ Cars that I've created custom left hand panels for are:
 * Williams-Toyota FW31
 * Dallara IR18
 * Porsche 919
+* Formula Renault 3.5
 
 For all other cars, a simplified left hand panel is displayed instead:
 
