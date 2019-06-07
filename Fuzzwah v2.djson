@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "85de6d2d-ba10-4bcd-acf0-1c0a807cac93",
+  "Id": "c3e314bf-b9f7-4d15-b68b-c396a16cc660",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -3150,7 +3150,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "19685599-019c-4ceb-9932-252759e402cd",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Right Page - iRacing",
               "Sid": 0,
               "Bindings": {
@@ -3213,7 +3213,7 @@
               "BorderTop": 0,
               "Id": "e758a1f8-b32f-4204-9b57-45272225b4b2",
               "IsFreezed": false,
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "Warnings",
               "RenderingSkip": 0,
               "Sid": 26,
