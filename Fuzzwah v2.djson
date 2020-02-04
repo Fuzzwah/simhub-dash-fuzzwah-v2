@@ -1948,7 +1948,7 @@
                             "$id": "170",
                             "Text": {
                               "$id": "171",
-                              "FormatString": "0.0",
+                              "FormatString": "0",
                               "Formula": {
                                 "$id": "172",
                                 "Expression": "[DataCorePlugin.GameData.NewData.ABSLevel]"
@@ -2205,7 +2205,7 @@
                             "$id": "191",
                             "Text": {
                               "$id": "192",
-                              "FormatString": "0.0",
+                              "FormatString": "0",
                               "Formula": {
                                 "$id": "193",
                                 "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcFuelMixture]"
