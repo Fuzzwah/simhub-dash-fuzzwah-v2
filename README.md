@@ -2,7 +2,7 @@
 
 This is my custom made SimHub dashboard specifically created to work with the cars I race on the iRacing service.
 
-The content shown in the left hand panel changes depending on the car you're driving. For example, below is a screenshot of what it looks like when driving a GT3 car:
+The content shown in the left hand panel changes depending on the car you're driving. For example, below is a screenshot of what it looks like when driving the Formula Renault 3.5:
 
 ![image](https://user-images.githubusercontent.com/658935/59003038-bfa05980-8857-11e9-841a-aaa039875ae6.png)
 
