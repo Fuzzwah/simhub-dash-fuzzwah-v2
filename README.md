@@ -6,7 +6,7 @@ The content shown in the left hand panel changes depending on the car you're dri
 
 ![image](https://user-images.githubusercontent.com/658935/59003038-bfa05980-8857-11e9-841a-aaa039875ae6.png)
 
-For a GTE, since it doesn't have ABS, the slot in the top right of the left panel displays the TC2 setting.
+For a cars that have in car adjustable options such as ABS, TC, ARB, etc these are displayed in the left panel.
 
 Cars that I've created custom left hand panels for are:
 
