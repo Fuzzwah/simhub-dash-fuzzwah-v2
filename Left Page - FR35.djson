@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "436838c1-3e93-42b7-9bd5-75e9dd508ea8",
+  "Id": "4db2f9a6-a595-4b8f-8520-3347d394c485",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -130,7 +130,7 @@
                           "$id": "17",
                           "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
                         },
-                        "StartColor": "#FF000000",
+                        "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
                         "MiddleColor": "#FF000000",
                         "MiddleColorValue": 1.0,
