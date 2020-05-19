@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "1b494bf1-0997-49a7-9837-9f8748dc06cb",
+  "Id": "3335d73c-a96c-4d7b-bfce-e57c36f23d4b",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -30,7 +30,7 @@
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
               "RepeatTopOffset": 30.0,
-              "Height": 95.0,
+              "Height": 195.0,
               "Width": 275.0,
               "BackgroundColor": "#00FFFFFF",
               "BlurRadius": 0.0,
@@ -123,7 +123,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 18.0,
-                    "Text": "Max",
+                    "Text": "Speed",
                     "TextColor": "#FF008000",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -242,8 +242,8 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": false,
-                    "Name": "Max Speed",
+                    "IsSelected": true,
+                    "Name": "Speed",
                     "RenderingSkip": 0,
                     "Sid": 3,
                     "Bindings": {
@@ -253,7 +253,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "23",
-                          "Expression": "round(\r\nmaximum(20000,isnull([DataCorePlugin.GameData.NewData.FilteredSpeedLocal],0))\r\n,0)"
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.Speed]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -278,7 +278,7 @@
               "BorderTop": 0,
               "Id": "10942ccc-7885-4c83-a1f2-29f0b2062b71",
               "IsSelected": false,
-              "Name": "Max Speed",
+              "Name": "Speed",
               "Sid": 0,
               "Bindings": {
                 "$id": "24"
@@ -383,7 +383,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 18.0,
-                    "Text": "Min",
+                    "Text": "RPM",
                     "TextColor": "#FF008000",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -453,7 +453,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 60.0,
-                    "Text": "123",
+                    "Text": "8000",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -502,8 +502,8 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
-                    "Name": "Min Speed",
+                    "IsSelected": false,
+                    "Name": "RPM",
                     "RenderingSkip": 0,
                     "Sid": 3,
                     "Bindings": {
@@ -513,7 +513,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "42",
-                          "Expression": "round(\r\nmaximum(20000,isnull(([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]*-1),0))*-1\r\n,0)"
+                          "Expression": "[DataCorePlugin.GameData.NewData.Rpms]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -538,7 +538,7 @@
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
               "IsSelected": false,
-              "Name": "Min Speed",
+              "Name": "RPM",
               "Sid": 0,
               "Bindings": {
                 "$id": "43",
@@ -1731,7 +1731,7 @@
                         "$id": "142",
                         "Formula": {
                           "$id": "143",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
+                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF008000",
                         "EnableMiddleColor": false,
@@ -1757,7 +1757,7 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 50.0,
+                    "FontSize": 55.0,
                     "Text": "13.7",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
@@ -2097,8 +2097,8 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 50.0,
-                    "Text": "2.49",
+                    "FontSize": 55.0,
+                    "Text": "0.98",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -2155,7 +2155,7 @@
                       "$id": "176",
                       "Text": {
                         "$id": "177",
-                        "FormatString": "0.00",
+                        "FormatString": "0.0",
                         "Formula": {
                           "$id": "178",
                           "Expression": "if(isnull([DataCorePlugin.Computed.Fuel_LastLapConsumption],'')=0,'-',[DataCorePlugin.Computed.Fuel_LastLapConsumption])"
@@ -2183,7 +2183,7 @@
                         "$id": "181",
                         "Formula": {
                           "$id": "182",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
+                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,55)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "FontSize"

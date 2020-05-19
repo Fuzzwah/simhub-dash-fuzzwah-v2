@@ -432,7 +432,7 @@
                     "BorderTop": 0,
                     "Id": "71d87777-4ef4-4c99-bd29-a17b09b118ef",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Title",
                     "RenderingSkip": 0,
                     "Sid": 2,
@@ -502,7 +502,7 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Min Speed",
                     "RenderingSkip": 0,
                     "Sid": 3,
@@ -513,7 +513,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "42",
-                          "Expression": "round(\r\nmaximum(20000,isnull(([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]*-1),0))*-1\r\n,0)"
+                          "Expression": "round(\r\nminimum(20000,isnull([DataCorePlugin.GameData.NewData.FilteredSpeedLocal],0))\r\n,0)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"

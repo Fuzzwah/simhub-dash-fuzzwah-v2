@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "4c6978d5-98bc-4bd3-b031-08dc4823f20f",
+  "Id": "aabb5da6-b895-4686-9161-a005d408a576",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -2002,7 +2002,7 @@
                             "$id": "170",
                             "Text": {
                               "$id": "171",
-                              "FormatString": "0",
+                              "FormatString": "0.0",
                               "Formula": {
                                 "$id": "172",
                                 "Expression": "[DataCorePlugin.GameData.NewData.ABSLevel]"
@@ -2271,7 +2271,7 @@
                             "$id": "191",
                             "Text": {
                               "$id": "192",
-                              "FormatString": "0",
+                              "FormatString": "0.0",
                               "Formula": {
                                 "$id": "193",
                                 "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcFuelMixture]"
@@ -2801,7 +2801,7 @@
                           "BorderTop": 0,
                           "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                           "IsFreezed": false,
-                          "IsSelected": true,
+                          "IsSelected": false,
                           "Name": "R/ARB",
                           "RenderingSkip": 0,
                           "Sid": 11,
@@ -3227,7 +3227,7 @@
                     "BorderTop": 0,
                     "Id": "c6e9aacb-b47d-45a9-aa19-2b22dd07b2bd",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Right Page",
                     "RenderingSkip": 0,
                     "Sid": 0,

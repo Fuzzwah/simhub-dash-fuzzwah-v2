@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "1b494bf1-0997-49a7-9837-9f8748dc06cb",
+  "Id": "b4ebbf11-2230-483a-bc43-77dc2bfda422",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -123,7 +123,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 18.0,
-                    "Text": "Max",
+                    "Text": "Speed",
                     "TextColor": "#FF008000",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -242,8 +242,8 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": false,
-                    "Name": "Max Speed",
+                    "IsSelected": true,
+                    "Name": "Speed",
                     "RenderingSkip": 0,
                     "Sid": 3,
                     "Bindings": {
@@ -253,7 +253,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "23",
-                          "Expression": "round(\r\nmaximum(20000,isnull([DataCorePlugin.GameData.NewData.FilteredSpeedLocal],0))\r\n,0)"
+                          "Expression": "[DataCorePlugin.GameData.NewData.FilteredSpeedLocal]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -278,7 +278,7 @@
               "BorderTop": 0,
               "Id": "10942ccc-7885-4c83-a1f2-29f0b2062b71",
               "IsSelected": false,
-              "Name": "Max Speed",
+              "Name": "Speed",
               "Sid": 0,
               "Bindings": {
                 "$id": "24"
@@ -383,7 +383,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 18.0,
-                    "Text": "Min",
+                    "Text": "RPM",
                     "TextColor": "#FF008000",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -453,7 +453,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 60.0,
-                    "Text": "123",
+                    "Text": "8000",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -502,8 +502,8 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
-                    "Name": "Min Speed",
+                    "IsSelected": false,
+                    "Name": "RPM",
                     "RenderingSkip": 0,
                     "Sid": 3,
                     "Bindings": {
@@ -513,7 +513,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "42",
-                          "Expression": "round(\r\nmaximum(20000,isnull(([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]*-1),0))*-1\r\n,0)"
+                          "Expression": "[DataCorePlugin.GameData.NewData.Rpms]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -538,7 +538,7 @@
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
               "IsSelected": false,
-              "Name": "Min Speed",
+              "Name": "RPM",
               "Sid": 0,
               "Bindings": {
                 "$id": "43",
@@ -1757,7 +1757,7 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 50.0,
+                    "FontSize": 55.0,
                     "Text": "13.7",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
@@ -2097,8 +2097,8 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 50.0,
-                    "Text": "2.49",
+                    "FontSize": 55.0,
+                    "Text": "0.98",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -2183,7 +2183,7 @@
                         "$id": "181",
                         "Formula": {
                           "$id": "182",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
+                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,55)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "FontSize"
