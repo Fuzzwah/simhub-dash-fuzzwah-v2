@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "aabb5da6-b895-4686-9161-a005d408a576",
+  "Id": "4c6978d5-98bc-4bd3-b031-08dc4823f20f",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -252,7 +252,7 @@
                         "$id": "26",
                         "Formula": {
                           "$id": "27",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5'),0,1)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2'),0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -380,7 +380,7 @@
                         "$id": "38",
                         "Formula": {
                           "$id": "39",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE')"
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R')"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -760,6 +760,70 @@
                     "Sid": 0,
                     "Bindings": {
                       "$id": "73"
+                    }
+                  },
+                  {
+                    "$id": "313",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+                    "NextScreenCommand": 1,
+                    "PreviousScreenCommand": 4,
+                    "AutoSize": true,
+                    "AutoSizeScale": 1.0,
+                    "FileName": "left page - lmp2.djson",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#00FFFFFF",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "314",
+                      "AllBorders": 0,
+                      "AllCornerRadius": 0,
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "CornerRadius": "0,0,0,0",
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "315"
+                      }
+                    },
+                    "Height": 300.0,
+                    "Left": 0.0,
+                    "Opacity": 100.0,
+                    "Top": 72.0,
+                    "Visible": false,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 275.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Left Page (LMP2)",
+                    "RenderingSkip": 0,
+                    "Sid": 0,
+                    "Bindings": {
+                      "$id": "316",
+                      "Visible": {
+                        "$id": "317",
+                        "Formula": {
+                          "$id": "318",
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Dallara P217 LMP2')"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Visible"
+                      }
                     }
                   }
                 ]
@@ -2002,7 +2066,7 @@
                             "$id": "170",
                             "Text": {
                               "$id": "171",
-                              "FormatString": "0.0",
+                              "FormatString": "0",
                               "Formula": {
                                 "$id": "172",
                                 "Expression": "[DataCorePlugin.GameData.NewData.ABSLevel]"
@@ -2271,7 +2335,7 @@
                             "$id": "191",
                             "Text": {
                               "$id": "192",
-                              "FormatString": "0.0",
+                              "FormatString": "0",
                               "Formula": {
                                 "$id": "193",
                                 "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcFuelMixture]"
@@ -2801,7 +2865,7 @@
                           "BorderTop": 0,
                           "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                           "IsFreezed": false,
-                          "IsSelected": false,
+                          "IsSelected": true,
                           "Name": "R/ARB",
                           "RenderingSkip": 0,
                           "Sid": 11,
@@ -3227,7 +3291,7 @@
                     "BorderTop": 0,
                     "Id": "c6e9aacb-b47d-45a9-aa19-2b22dd07b2bd",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Right Page",
                     "RenderingSkip": 0,
                     "Sid": 0,
