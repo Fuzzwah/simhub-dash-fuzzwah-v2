@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "f287f9ef-7946-456b-8009-5cf4b2961810",
+  "Id": "d1c15079-d268-49c2-a046-756d6b3e8886",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -657,7 +657,7 @@
                     "BorderTop": 0,
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Left Page (FR3.5)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -681,7 +681,7 @@
                     "PreviousScreenCommand": 4,
                     "AutoSize": true,
                     "AutoSizeScale": 1.0,
-                    "FileName": "left page - iracing.djson",
+                    "FileName": "left page - lmp2.djson",
                     "Rotation": 0.0,
                     "UseRotation": false,
                     "CanResize": true,
@@ -719,21 +719,30 @@
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
                     "IsSelected": false,
-                    "Name": "Left Page (Default)",
+                    "Name": "Left Page (LMP2)",
                     "RenderingSkip": 0,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "73"
+                      "$id": "73",
+                      "Visible": {
+                        "$id": "74",
+                        "Formula": {
+                          "$id": "75",
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Dallara P217 LMP2')"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Visible"
+                      }
                     }
                   },
                   {
-                    "$id": "74",
+                    "$id": "76",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
                     "NextScreenCommand": 1,
                     "PreviousScreenCommand": 4,
                     "AutoSize": true,
                     "AutoSizeScale": 1.0,
-                    "FileName": "left page - lmp2.djson",
+                    "FileName": "left page - iracing.djson",
                     "Rotation": 0.0,
                     "UseRotation": false,
                     "CanResize": true,
@@ -741,7 +750,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "75",
+                      "$id": "77",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -752,7 +761,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "76"
+                        "$id": "78"
                       }
                     },
                     "Height": 300.0,
@@ -771,20 +780,11 @@
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
                     "IsSelected": false,
-                    "Name": "Left Page (LMP2)",
+                    "Name": "Left Page (Default)",
                     "RenderingSkip": 0,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "77",
-                      "Visible": {
-                        "$id": "78",
-                        "Formula": {
-                          "$id": "79",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Dallara P217 LMP2')"
-                        },
-                        "Mode": 2,
-                        "TargetPropertyName": "Visible"
-                      }
+                      "$id": "79"
                     }
                   }
                 ]
@@ -1217,7 +1217,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -1474,7 +1474,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -1731,7 +1731,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -1988,7 +1988,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -2245,7 +2245,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -2502,7 +2502,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -2759,7 +2759,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -3016,7 +3016,7 @@
                     "Left": 288.0,
                     "Opacity": 100.0,
                     "Top": 70.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "BorderBottom": 0,
@@ -3025,7 +3025,7 @@
                     "BorderRight": 0,
                     "BorderTop": 0,
                     "Id": "1740c435-70ac-4daf-87e2-80ff0727a931",
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Bias",
                     "Sid": 0,
                     "Bindings": {
@@ -3049,7 +3049,7 @@
               "Left": 288.0,
               "Opacity": 100.0,
               "Top": 70.0,
-              "Visible": false,
+              "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
               "BorderBottom": 0,
