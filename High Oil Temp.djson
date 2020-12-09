@@ -1,9 +1,9 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "7a610b77-66ea-4ae7-bc37-b9c34f987874",
+  "Id": "4ec7b666-d9de-43d9-8368-c2dcfebdd903",
   "BaseHeight": 70,
-  "BaseWidth": 800,
+  "BaseWidth": 520,
   "BackgroundColor": "#FF000000",
   "Screens": {
     "$id": "2",
@@ -38,9 +38,15 @@
               "FontStyle": "Normal",
               "FontSize": 60.0,
               "Text": "",
-              "TextColor": "#FFFFFFFF",
+              "TextColor": "#FF000000",
               "HorizontalAlignment": 1,
               "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
               "Rotation": 0.0,
               "UseRotation": false,
               "CanResize": true,
@@ -49,14 +55,11 @@
               "EnableBlur": false,
               "BorderStyle": {
                 "$id": "7",
-                "AllBorders": 0,
-                "AllCornerRadius": 0,
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
                 "BorderLeft": 0,
                 "BorderRight": 0,
-                "CornerRadius": "0,0,0,0",
                 "RadiusTopLeft": 0,
                 "RadiusTopRight": 0,
                 "RadiusBottomLeft": 0,
@@ -72,7 +75,7 @@
               "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
-              "Width": 800.0,
+              "Width": 520.0,
               "BorderBottom": 0,
               "BorderColor": "#FFFFFFFF",
               "BorderLeft": 0,
@@ -83,7 +86,7 @@
               "IsSelected": false,
               "Name": "Background",
               "RenderingSkip": 0,
-              "Sid": 3,
+              "Sid": 0,
               "Bindings": {
                 "$id": "9"
               }
@@ -101,10 +104,16 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 60.0,
-              "Text": "Incident Count 1000x",
+              "Text": "OIL TEMP",
               "TextColor": "#FFFFFFFF",
               "HorizontalAlignment": 1,
               "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
               "Rotation": 0.0,
               "UseRotation": false,
               "CanResize": true,
@@ -113,14 +122,11 @@
               "EnableBlur": false,
               "BorderStyle": {
                 "$id": "11",
-                "AllBorders": 0,
-                "AllCornerRadius": 0,
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
                 "BorderLeft": 0,
                 "BorderRight": 0,
-                "CornerRadius": "0,0,0,0",
                 "RadiusTopLeft": 0,
                 "RadiusTopRight": 0,
                 "RadiusBottomLeft": 0,
@@ -136,7 +142,7 @@
               "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
-              "Width": 800.0,
+              "Width": 520.0,
               "BorderBottom": 0,
               "BorderColor": "#FFFFFFFF",
               "BorderLeft": 0,
@@ -145,26 +151,25 @@
               "Id": "a36a6848-f9ef-48f4-a296-94cef171be44",
               "IsFreezed": false,
               "IsSelected": true,
-              "Name": "Incidents",
+              "Name": "OIL TEMP",
               "RenderingSkip": 0,
-              "Sid": 6,
+              "Sid": 1,
               "Bindings": {
                 "$id": "13",
-                "Text": {
+                "Visible": {
                   "$id": "14",
-                  "FormatString": "Incident Count 0x",
                   "Formula": {
                     "$id": "15",
-                    "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.PlayerCarMyIncidentCount],0)"
+                    "Expression": "blink(EngineOff,500,1)"
                   },
                   "Mode": 2,
-                  "TargetPropertyName": "Text"
+                  "TargetPropertyName": "Visible"
                 }
               }
             }
           ]
         },
-        "Id": "73ccd194-0074-4e86-ba30-547c7d6f406e",
+        "Id": "e6057629-a074-403f-8132-77b2723a1014",
         "Name": "Screen1",
         "Sid": 0,
         "Bindings": {
@@ -186,29 +191,15 @@
   },
   "Metadata": {
     "$id": "18",
-    "ScreenCount": 1.0,
-    "InGameScreensIndexs": {
-      "$id": "19",
-      "$values": [
-        0
-      ]
-    },
-    "IdleScreensIndexs": {
-      "$id": "20",
-      "$values": []
-    },
+    "ScreenCount": 0.0,
     "MainPreviewIndex": 0,
     "IsOverlay": false,
     "ShowInTaskBar": true,
-    "Width": 800.0,
-    "Height": 70.0,
+    "Width": 0.0,
+    "Height": 0.0,
     "OverlaySizeWarning": false,
-    "MetadataVersion": 2.0,
-    "EnableOnDashboardMessaging": true,
-    "PitScreensIndexs": {
-      "$id": "21",
-      "$values": []
-    }
+    "MetadataVersion": 0.0,
+    "EnableOnDashboardMessaging": false
   },
   "ShowOnScreenControls": true,
   "ShowInTaskBar": true,
