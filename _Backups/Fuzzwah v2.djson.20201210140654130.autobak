@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "8ee7dc20-af9b-4603-9b7e-f11dcb8e3cb4",
+  "Id": "9ebd6df7-4fba-415b-9018-3aa1a6c388e0",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -38,7 +38,7 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 16.0,
-              "Text": "v2.7.1",
+              "Text": "v2.7",
               "TextColor": "#FF008080",
               "HorizontalAlignment": 0,
               "VerticalAlignment": 0,
@@ -70,13 +70,13 @@
                 }
               },
               "Height": 20.0,
-              "Left": 720.0,
+              "Left": 740.0,
               "Opacity": 100.0,
               "Top": 420.0,
               "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
-              "Width": 75.0,
+              "Width": 40.0,
               "BorderBottom": 0,
               "BorderColor": "#FFFFFFFF",
               "BorderLeft": 0,
@@ -306,7 +306,7 @@
                     "BorderTop": 0,
                     "Id": "aa28defb-4df0-4052-8810-8292270e9220",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Left Page (iR-01)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -3877,7 +3877,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "7e0e52ea-d6b3-49eb-a789-93d41325a9e9",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Last Lap",
               "Sid": 28,
               "Bindings": {
@@ -4292,27 +4292,11 @@
                     "RenderingSkip": 0,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "367",
-                      "BackgroundColor": {
-                        "$id": "368",
-                        "Formula": {
-                          "$id": "369",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
-                        },
-                        "StartColor": "#FF171717",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFF0000",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "BackgroundColor"
-                      }
+                      "$id": "367"
                     }
                   },
                   {
-                    "$id": "370",
+                    "$id": "368",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -4341,7 +4325,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "371",
+                      "$id": "369",
                       "BorderColor": "#FF778899",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -4352,7 +4336,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "372"
+                        "$id": "370"
                       }
                     },
                     "Height": 70.0,
@@ -4375,20 +4359,20 @@
                     "RenderingSkip": 12,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "373",
+                      "$id": "371",
                       "Text": {
-                        "$id": "374",
+                        "$id": "372",
                         "Formula": {
-                          "$id": "375",
+                          "$id": "373",
                           "Expression": "toshorttime(\r\n\r\n\r\nif(![DataCorePlugin.GameRunning],'--:--.---',(\r\n\r\nif(isnull([DataCorePlugin.CurrentGame],0)=='IRacing'\r\n,\r\n(\r\nif(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),\r\nsecondstotimespan(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)),'∞')\r\n)\r\n,isnull([DataCorePlugin.GameData.NewData.SessionTimeLeft],0))\r\n))\r\n\r\n,0,0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "FontSize": {
-                        "$id": "376",
+                        "$id": "374",
                         "Formula": {
-                          "$id": "377",
+                          "$id": "375",
                           "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]>3600,30,40)"
                         },
                         "Mode": 2,
@@ -4417,7 +4401,7 @@
               "Name": "Time Left",
               "Sid": 0,
               "Bindings": {
-                "$id": "378"
+                "$id": "376"
               }
             }
           ]
@@ -4426,7 +4410,7 @@
         "Name": "Dashboard",
         "Sid": 0,
         "Bindings": {
-          "$id": "379"
+          "$id": "377"
         }
       }
     ]
@@ -4439,10 +4423,10 @@
     "$ref": "11"
   },
   "Images": {
-    "$id": "380",
+    "$id": "378",
     "$values": [
       {
-        "$id": "381",
+        "$id": "379",
         "Name": "fuzzwah-racing",
         "Extension": ".png",
         "Optimized": true,
@@ -4451,19 +4435,19 @@
     ]
   },
   "Metadata": {
-    "$id": "382",
+    "$id": "380",
     "Category": "Fuzzwah",
     "Description": "Fuzzwah",
     "Author": "Fuzzwah",
     "ScreenCount": 2.0,
     "InGameScreensIndexs": {
-      "$id": "383",
+      "$id": "381",
       "$values": [
         1
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "384",
+      "$id": "382",
       "$values": [
         0
       ]
@@ -4477,7 +4461,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "385",
+      "$id": "383",
       "$values": []
     }
   },
