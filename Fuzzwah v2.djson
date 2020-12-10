@@ -21,7 +21,7 @@
         },
         "BackgroundColor": "#FF111111",
         "Background": "fuzzwah-racing",
-        "IsSelected": true,
+        "IsSelected": false,
         "Items": {
           "$id": "5",
           "$values": [
@@ -84,7 +84,7 @@
               "BorderTop": 0,
               "Id": "3590f153-5a4f-4668-8647-f24786aa8a60",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Version",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -113,7 +113,7 @@
           "Interpreter": 1
         },
         "BackgroundColor": "#FF000000",
-        "IsSelected": false,
+        "IsSelected": true,
         "Items": {
           "$id": "13",
           "$values": [
@@ -255,7 +255,7 @@
                         "$id": "26",
                         "Formula": {
                           "$id": "27",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01'),0,1)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO'),0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -306,7 +306,7 @@
                     "BorderTop": 0,
                     "Id": "aa28defb-4df0-4052-8810-8292270e9220",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Left Page (iR-01)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -377,7 +377,7 @@
                         "$id": "38",
                         "Formula": {
                           "$id": "39",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3')"
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Lamborghini Huracan GT3 EVO')"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -733,7 +733,7 @@
                     "BorderTop": 0,
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Left Page (LMP2)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -4420,7 +4420,7 @@
   "ShowBoundingRectangles": false,
   "GridSize": 10,
   "SelectedScreen": {
-    "$ref": "3"
+    "$ref": "11"
   },
   "Images": {
     "$id": "378",

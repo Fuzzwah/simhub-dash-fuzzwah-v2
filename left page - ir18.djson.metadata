@@ -3,14 +3,9 @@
   "Title": null,
   "Description": null,
   "Author": null,
-  "ScreenCount": 6.0,
+  "ScreenCount": 1.0,
   "InGameScreensIndexs": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5
+    0
   ],
   "IdleScreensIndexs": [],
   "MainPreviewIndex": 0,
