@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "8ee7dc20-af9b-4603-9b7e-f11dcb8e3cb4",
+  "Id": "df50a0f6-a75b-437d-8d8e-55bdaa0cd6c3",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -38,7 +38,7 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 16.0,
-              "Text": "v2.7.1",
+              "Text": "v2.7.2",
               "TextColor": "#FF008080",
               "HorizontalAlignment": 0,
               "VerticalAlignment": 0,
@@ -3877,7 +3877,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "7e0e52ea-d6b3-49eb-a789-93d41325a9e9",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Last Lap",
               "Sid": 28,
               "Bindings": {
@@ -4414,10 +4414,316 @@
               "BorderTop": 0,
               "Id": "bd88c9c3-e870-4b23-a57a-ce30ee2d3ddf",
               "IsSelected": false,
+              "Name": "Laps Left",
+              "Sid": 0,
+              "Bindings": {
+                "$id": "378",
+                "Visible": {
+                  "$id": "379",
+                  "Formula": {
+                    "$id": "380",
+                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),0,1)"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "381",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Repetitions": 0.0,
+              "RepeatLeftOffset": 0.0,
+              "RepeatTopOffset": 30.0,
+              "Height": 77.0,
+              "Width": 135.0,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "Rotation": 0.0,
+              "BorderStyle": {
+                "$id": "382",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "383"
+                }
+              },
+              "RenderingSkip": 0,
+              "ShowSelection": false,
+              "CanResize": false,
+              "Childrens": {
+                "$id": "384",
+                "$values": [
+                  {
+                    "$id": "385",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+                    "IsRectangleItem": true,
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "386",
+                      "BorderColor": "#FF808080",
+                      "BorderTop": 4,
+                      "BorderBottom": 4,
+                      "BorderLeft": 4,
+                      "BorderRight": 4,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "387"
+                      }
+                    },
+                    "Height": 70.0,
+                    "Left": 665.0,
+                    "Opacity": 100.0,
+                    "Top": 380.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 135.0,
+                    "BorderBottom": 4,
+                    "BorderColor": "#FF808080",
+                    "BorderLeft": 4,
+                    "BorderRight": 4,
+                    "BorderTop": 4,
+                    "Id": "814dba01-97c0-46b0-9a01-4e5cdb3c9ccc",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Background",
+                    "RenderingSkip": 0,
+                    "Sid": 21,
+                    "Bindings": {
+                      "$id": "388",
+                      "BackgroundColor": {
+                        "$id": "389",
+                        "Formula": {
+                          "$id": "390",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                        },
+                        "StartColor": "#FF171717",
+                        "EnableMiddleColor": false,
+                        "MiddleColor": "#FF000000",
+                        "MiddleColorValue": 1.0,
+                        "EndColor": "#FFFF0000",
+                        "StartColorValue": 0.0,
+                        "EndColorValue": 1.0,
+                        "Mode": 4,
+                        "TargetPropertyName": "BackgroundColor"
+                      }
+                    }
+                  },
+                  {
+                    "$id": "391",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "B612",
+                    "FontWeight": "Bold",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 16.0,
+                    "Text": "Laps Left",
+                    "TextColor": "#FF808080",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "392",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "393"
+                      }
+                    },
+                    "Height": 20.0,
+                    "Left": 694.0,
+                    "Opacity": 100.0,
+                    "Top": 375.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 80.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "de37220b-a9b9-468c-9ec7-21e2fe0c57a7",
+                    "IsFreezed": false,
+                    "IsSelected": true,
+                    "Name": "Title",
+                    "RenderingSkip": 0,
+                    "Sid": 0,
+                    "Bindings": {
+                      "$id": "394",
+                      "BackgroundColor": {
+                        "$id": "395",
+                        "Formula": {
+                          "$id": "396",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                        },
+                        "StartColor": "#FF171717",
+                        "EnableMiddleColor": false,
+                        "MiddleColor": "#FF000000",
+                        "MiddleColorValue": 1.0,
+                        "EndColor": "#FFFF0000",
+                        "StartColorValue": 0.0,
+                        "EndColorValue": 1.0,
+                        "Mode": 4,
+                        "TargetPropertyName": "BackgroundColor"
+                      }
+                    }
+                  },
+                  {
+                    "$id": "397",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "Prezident",
+                    "FontWeight": "Normal",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 40.0,
+                    "Text": "15",
+                    "TextColor": "#FFD3D3D3",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "0000000000",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#00FFFFFF",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "398",
+                      "BorderColor": "#FF778899",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "399"
+                      }
+                    },
+                    "Height": 70.0,
+                    "Left": 665.0,
+                    "Opacity": 100.0,
+                    "Top": 382.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 135.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FF778899",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "dd6b1975-2b26-4653-994d-c0521d2c5edb",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Laps left",
+                    "RenderingSkip": 12,
+                    "Sid": 0,
+                    "Bindings": {
+                      "$id": "400",
+                      "Text": {
+                        "$id": "401",
+                        "Formula": {
+                          "$id": "402",
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Text"
+                      },
+                      "FontSize": {
+                        "$id": "403",
+                        "Formula": {
+                          "$id": "404",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]>3600,30,40)"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "FontSize"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Group": false,
+              "UseRotation": false,
+              "EnableBlur": false,
+              "Left": 665.0,
+              "Opacity": 100.0,
+              "Top": 375.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "bd88c9c3-e870-4b23-a57a-ce30ee2d3ddf",
+              "IsSelected": false,
               "Name": "Time Left",
               "Sid": 0,
               "Bindings": {
-                "$id": "378"
+                "$id": "405",
+                "Visible": {
+                  "$id": "406",
+                  "Formula": {
+                    "$id": "407",
+                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),1,0)"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
               }
             }
           ]
@@ -4426,7 +4732,7 @@
         "Name": "Dashboard",
         "Sid": 0,
         "Bindings": {
-          "$id": "379"
+          "$id": "408"
         }
       }
     ]
@@ -4439,10 +4745,10 @@
     "$ref": "11"
   },
   "Images": {
-    "$id": "380",
+    "$id": "409",
     "$values": [
       {
-        "$id": "381",
+        "$id": "410",
         "Name": "fuzzwah-racing",
         "Extension": ".png",
         "Optimized": true,
@@ -4451,19 +4757,19 @@
     ]
   },
   "Metadata": {
-    "$id": "382",
+    "$id": "411",
     "Category": "Fuzzwah",
     "Description": "Fuzzwah",
     "Author": "Fuzzwah",
     "ScreenCount": 2.0,
     "InGameScreensIndexs": {
-      "$id": "383",
+      "$id": "412",
       "$values": [
         1
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "384",
+      "$id": "413",
       "$values": [
         0
       ]
@@ -4477,7 +4783,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "385",
+      "$id": "414",
       "$values": []
     }
   },
