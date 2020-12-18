@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "df50a0f6-a75b-437d-8d8e-55bdaa0cd6c3",
+  "Id": "8e4820bf-f87a-4184-9b20-eee3dfeeff2b",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -38,7 +38,7 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 16.0,
-              "Text": "v2.7.2",
+              "Text": "v2.7.3",
               "TextColor": "#FF008080",
               "HorizontalAlignment": 0,
               "VerticalAlignment": 0,
@@ -245,7 +245,7 @@
                     "BorderTop": 0,
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Left Page (Simple)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -255,7 +255,7 @@
                         "$id": "26",
                         "Formula": {
                           "$id": "27",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO'),0,1)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO','BMW M4 GT3'),0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -377,7 +377,7 @@
                         "$id": "38",
                         "Formula": {
                           "$id": "39",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Lamborghini Huracan GT3 EVO')"
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Lamborghini Huracan GT3 EVO','BMW M4 GT3')"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -4214,7 +4214,7 @@
                         "$id": "362",
                         "Formula": {
                           "$id": "363",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4297,7 +4297,7 @@
                         "$id": "368",
                         "Formula": {
                           "$id": "369",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4414,7 +4414,7 @@
               "BorderTop": 0,
               "Id": "bd88c9c3-e870-4b23-a57a-ce30ee2d3ddf",
               "IsSelected": false,
-              "Name": "Laps Left",
+              "Name": "Time Left",
               "Sid": 0,
               "Bindings": {
                 "$id": "378",
@@ -4422,7 +4422,7 @@
                   "$id": "379",
                   "Formula": {
                     "$id": "380",
-                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),0,1)"
+                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),1,0)"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -4435,7 +4435,7 @@
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
               "RepeatTopOffset": 30.0,
-              "Height": 77.0,
+              "Height": 75.0,
               "Width": 135.0,
               "BackgroundColor": "#00FFFFFF",
               "BlurRadius": 0.0,
@@ -4511,7 +4511,7 @@
                         "$id": "389",
                         "Formula": {
                           "$id": "390",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4584,7 +4584,7 @@
                     "BorderTop": 0,
                     "Id": "de37220b-a9b9-468c-9ec7-21e2fe0c57a7",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Title",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -4594,7 +4594,7 @@
                         "$id": "395",
                         "Formula": {
                           "$id": "396",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4701,7 +4701,7 @@
               "Left": 665.0,
               "Opacity": 100.0,
               "Top": 375.0,
-              "Visible": true,
+              "Visible": false,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
               "BorderBottom": 0,
@@ -4711,7 +4711,7 @@
               "BorderTop": 0,
               "Id": "bd88c9c3-e870-4b23-a57a-ce30ee2d3ddf",
               "IsSelected": false,
-              "Name": "Time Left",
+              "Name": "Laps Left",
               "Sid": 0,
               "Bindings": {
                 "$id": "405",
@@ -4719,7 +4719,7 @@
                   "$id": "406",
                   "Formula": {
                     "$id": "407",
-                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),1,0)"
+                    "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),0,1)"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
