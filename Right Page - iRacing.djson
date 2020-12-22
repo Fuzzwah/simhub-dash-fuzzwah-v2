@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "34ae1c1c-9e0b-4969-87bc-ceb7519f4862",
+  "Id": "ccacec4e-8d53-40a2-9c41-f77c6f740630",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -183,7 +183,7 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 60.0,
+                    "FontSize": 50.0,
                     "Text": "235",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
@@ -431,7 +431,7 @@
                     "FontWeight": "Normal",
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
-                    "FontSize": 60.0,
+                    "FontSize": 50.0,
                     "Text": "123",
                     "TextColor": "#FF32CD32",
                     "HorizontalAlignment": 1,
@@ -1606,23 +1606,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "138",
-                        "BorderColor": {
-                          "$id": "139",
-                          "Formula": {
-                            "$id": "140",
-                            "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
-                          },
-                          "StartColor": "#FF008000",
-                          "EnableMiddleColor": false,
-                          "MiddleColor": "#FF000000",
-                          "MiddleColorValue": 1.0,
-                          "EndColor": "#FFFFFFFF",
-                          "StartColorValue": 0.0,
-                          "EndColorValue": 1.0,
-                          "Mode": 4,
-                          "TargetPropertyName": "BorderColor"
-                        }
+                        "$id": "138"
                       }
                     },
                     "Height": 95.0,
@@ -1645,27 +1629,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "141",
-                      "BackgroundColor": {
-                        "$id": "142",
-                        "Formula": {
-                          "$id": "143",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
-                        },
-                        "StartColor": "#FF171717",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFF0000",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "BackgroundColor"
-                      }
+                      "$id": "139"
                     }
                   },
                   {
-                    "$id": "144",
+                    "$id": "140",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1694,7 +1662,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "145",
+                      "$id": "141",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1705,7 +1673,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "146"
+                        "$id": "142"
                       }
                     },
                     "Height": 23.0,
@@ -1723,48 +1691,16 @@
                     "BorderTop": 0,
                     "Id": "71d87777-4ef4-4c99-bd29-a17b09b118ef",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Title",
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "147",
-                      "BackgroundColor": {
-                        "$id": "148",
-                        "Formula": {
-                          "$id": "149",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
-                        },
-                        "StartColor": "#FF171717",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFF0000",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "BackgroundColor"
-                      },
-                      "TextColor": {
-                        "$id": "150",
-                        "Formula": {
-                          "$id": "151",
-                          "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
-                        },
-                        "StartColor": "#FF008000",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFFFFFF",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "TextColor"
-                      }
+                      "$id": "143"
                     }
                   },
                   {
-                    "$id": "152",
+                    "$id": "144",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1793,7 +1729,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "153",
+                      "$id": "145",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1804,7 +1740,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "154"
+                        "$id": "146"
                       }
                     },
                     "Height": 70.0,
@@ -1822,26 +1758,26 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Laps Since Pit",
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "155",
+                      "$id": "147",
                       "Text": {
-                        "$id": "156",
+                        "$id": "148",
                         "FormatString": "0",
                         "Formula": {
-                          "$id": "157",
-                          "Expression": "if(isnull([IRacingExtraProperties.iRacing_Player_LapsSinceLastPit],'')=0,'-',[IRacingExtraProperties.iRacing_Player_LapsSinceLastPit])"
+                          "$id": "149",
+                          "Expression": "if(isnull([IRacingExtraProperties.iRacing_Player_LapsSinceLastPit],'0')=0,'1',[IRacingExtraProperties.iRacing_Player_LapsSinceLastPit])"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "158",
+                        "$id": "150",
                         "Formula": {
-                          "$id": "159",
+                          "$id": "151",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF32CD32",
@@ -1855,9 +1791,9 @@
                         "TargetPropertyName": "TextColor"
                       },
                       "FontSize": {
-                        "$id": "160",
+                        "$id": "152",
                         "Formula": {
-                          "$id": "161",
+                          "$id": "153",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
                         },
                         "Mode": 2,
@@ -1886,11 +1822,11 @@
               "Name": "Since Pit",
               "Sid": 24,
               "Bindings": {
-                "$id": "162"
+                "$id": "154"
               }
             },
             {
-              "$id": "163",
+              "$id": "155",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1901,7 +1837,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "164",
+                "$id": "156",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1912,17 +1848,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "165"
+                  "$id": "157"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "166",
+                "$id": "158",
                 "$values": [
                   {
-                    "$id": "167",
+                    "$id": "159",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1932,7 +1868,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "168",
+                      "$id": "160",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -1943,11 +1879,11 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "169",
+                        "$id": "161",
                         "BorderColor": {
-                          "$id": "170",
+                          "$id": "162",
                           "Formula": {
-                            "$id": "171",
+                            "$id": "163",
                             "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                           },
                           "StartColor": "#FF008000",
@@ -1982,11 +1918,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "172",
+                      "$id": "164",
                       "BackgroundColor": {
-                        "$id": "173",
+                        "$id": "165",
                         "Formula": {
-                          "$id": "174",
+                          "$id": "166",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF171717",
@@ -2002,7 +1938,7 @@
                     }
                   },
                   {
-                    "$id": "175",
+                    "$id": "167",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2031,7 +1967,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "176",
+                      "$id": "168",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2042,7 +1978,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "177"
+                        "$id": "169"
                       }
                     },
                     "Height": 23.0,
@@ -2065,11 +2001,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "178",
+                      "$id": "170",
                       "BackgroundColor": {
-                        "$id": "179",
+                        "$id": "171",
                         "Formula": {
-                          "$id": "180",
+                          "$id": "172",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2083,9 +2019,9 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "181",
+                        "$id": "173",
                         "Formula": {
-                          "$id": "182",
+                          "$id": "174",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF008000",
@@ -2101,7 +2037,7 @@
                     }
                   },
                   {
-                    "$id": "183",
+                    "$id": "175",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2130,7 +2066,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "184",
+                      "$id": "176",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2141,7 +2077,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "185"
+                        "$id": "177"
                       }
                     },
                     "Height": 70.0,
@@ -2164,21 +2100,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "186",
+                      "$id": "178",
                       "Text": {
-                        "$id": "187",
+                        "$id": "179",
                         "FormatString": "0.0",
                         "Formula": {
-                          "$id": "188",
+                          "$id": "180",
                           "Expression": "[DataCorePlugin.Computed.Fuel_RemainingLaps]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "189",
+                        "$id": "181",
                         "Formula": {
-                          "$id": "190",
+                          "$id": "182",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF32CD32",
@@ -2214,11 +2150,11 @@
               "Name": "Fuel Laps",
               "Sid": 24,
               "Bindings": {
-                "$id": "191"
+                "$id": "183"
               }
             },
             {
-              "$id": "192",
+              "$id": "184",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -2229,7 +2165,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "193",
+                "$id": "185",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -2240,17 +2176,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "194"
+                  "$id": "186"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "195",
+                "$id": "187",
                 "$values": [
                   {
-                    "$id": "196",
+                    "$id": "188",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -2260,7 +2196,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "197",
+                      "$id": "189",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -2271,11 +2207,11 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "198",
+                        "$id": "190",
                         "BorderColor": {
-                          "$id": "199",
+                          "$id": "191",
                           "Formula": {
-                            "$id": "200",
+                            "$id": "192",
                             "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                           },
                           "StartColor": "#FF008000",
@@ -2310,11 +2246,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "201",
+                      "$id": "193",
                       "BackgroundColor": {
-                        "$id": "202",
+                        "$id": "194",
                         "Formula": {
-                          "$id": "203",
+                          "$id": "195",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2330,7 +2266,7 @@
                     }
                   },
                   {
-                    "$id": "204",
+                    "$id": "196",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2359,7 +2295,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "205",
+                      "$id": "197",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2370,7 +2306,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "206"
+                        "$id": "198"
                       }
                     },
                     "Height": 23.0,
@@ -2393,11 +2329,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "207",
+                      "$id": "199",
                       "BackgroundColor": {
-                        "$id": "208",
+                        "$id": "200",
                         "Formula": {
-                          "$id": "209",
+                          "$id": "201",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2411,9 +2347,9 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "210",
+                        "$id": "202",
                         "Formula": {
-                          "$id": "211",
+                          "$id": "203",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF008000",
@@ -2429,7 +2365,7 @@
                     }
                   },
                   {
-                    "$id": "212",
+                    "$id": "204",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2458,7 +2394,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "213",
+                      "$id": "205",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2469,7 +2405,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "214"
+                        "$id": "206"
                       }
                     },
                     "Height": 70.0,
@@ -2492,21 +2428,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "215",
+                      "$id": "207",
                       "Text": {
-                        "$id": "216",
+                        "$id": "208",
                         "FormatString": "0.00",
                         "Formula": {
-                          "$id": "217",
+                          "$id": "209",
                           "Expression": "if(isnull([DataCorePlugin.Computed.Fuel_LastLapConsumption],'')=0,'-',[DataCorePlugin.Computed.Fuel_LastLapConsumption])"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "218",
+                        "$id": "210",
                         "Formula": {
-                          "$id": "219",
+                          "$id": "211",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF32CD32",
@@ -2520,9 +2456,9 @@
                         "TargetPropertyName": "TextColor"
                       },
                       "FontSize": {
-                        "$id": "220",
+                        "$id": "212",
                         "Formula": {
-                          "$id": "221",
+                          "$id": "213",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
                         },
                         "Mode": 2,
@@ -2551,7 +2487,7 @@
               "Name": "Fuel Used Last Lap",
               "Sid": 24,
               "Bindings": {
-                "$id": "222"
+                "$id": "214"
               }
             }
           ]
@@ -2560,7 +2496,7 @@
         "Name": "Speed and Fuel",
         "Sid": 0,
         "Bindings": {
-          "$id": "223"
+          "$id": "215"
         }
       }
     ]
@@ -2573,10 +2509,10 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "224",
+    "$id": "216",
     "$values": [
       {
-        "$id": "225",
+        "$id": "217",
         "Name": "RPM Bar multicoloured",
         "Extension": ".png",
         "Optimized": true,
@@ -2585,16 +2521,16 @@
     ]
   },
   "Metadata": {
-    "$id": "226",
+    "$id": "218",
     "ScreenCount": 1.0,
     "InGameScreensIndexs": {
-      "$id": "227",
+      "$id": "219",
       "$values": [
         0
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "228",
+      "$id": "220",
       "$values": []
     },
     "MainPreviewIndex": 0,
@@ -2606,7 +2542,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "229",
+      "$id": "221",
       "$values": []
     }
   },

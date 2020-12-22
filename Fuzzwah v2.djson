@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "256b3725-bc97-43c5-806e-47464d9ca747",
+  "Id": "02f0f876-3db2-4ffe-ba49-5b9efc68aa00",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -21,7 +21,7 @@
         },
         "BackgroundColor": "#FF111111",
         "Background": "fuzzwah-racing",
-        "IsSelected": true,
+        "IsSelected": false,
         "Items": {
           "$id": "5",
           "$values": [
@@ -38,7 +38,7 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 16.0,
-              "Text": "v2.8.1",
+              "Text": "v2.8.3",
               "TextColor": "#FF008080",
               "HorizontalAlignment": 0,
               "VerticalAlignment": 0,
@@ -84,7 +84,7 @@
               "BorderTop": 0,
               "Id": "3590f153-5a4f-4668-8647-f24786aa8a60",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Version",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -113,7 +113,7 @@
           "Interpreter": 1
         },
         "BackgroundColor": "#FF000000",
-        "IsSelected": false,
+        "IsSelected": true,
         "Items": {
           "$id": "13",
           "$values": [
@@ -3481,7 +3481,7 @@
                     "BorderTop": 0,
                     "Id": "c6e9aacb-b47d-45a9-aa19-2b22dd07b2bd",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Right Page",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -3507,7 +3507,7 @@
               "BorderTop": 0,
               "Id": "19685599-019c-4ceb-9932-252759e402cd",
               "IsSelected": false,
-              "Name": "Right Page - iRacing",
+              "Name": "Right Page",
               "Sid": 0,
               "Bindings": {
                 "$id": "300",
@@ -4214,7 +4214,7 @@
                         "$id": "362",
                         "Formula": {
                           "$id": "363",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4297,7 +4297,7 @@
                         "$id": "368",
                         "Formula": {
                           "$id": "369",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4313,7 +4313,7 @@
                         "$id": "370",
                         "Formula": {
                           "$id": "371",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
                         },
                         "StartColor": "#FF808080",
                         "EnableMiddleColor": false,
@@ -4409,6 +4409,22 @@
                         },
                         "Mode": 2,
                         "TargetPropertyName": "FontSize"
+                      },
+                      "ShadowColor": {
+                        "$id": "380",
+                        "Formula": {
+                          "$id": "381",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                        },
+                        "StartColor": "#FF808080",
+                        "EnableMiddleColor": false,
+                        "MiddleColor": "#FF000000",
+                        "MiddleColorValue": 1.0,
+                        "EndColor": "#FFFFF5EE",
+                        "StartColorValue": 0.0,
+                        "EndColorValue": 1.0,
+                        "Mode": 4,
+                        "TargetPropertyName": "ShadowColor"
                       }
                     }
                   }
@@ -4433,11 +4449,11 @@
               "Name": "Time Left",
               "Sid": 0,
               "Bindings": {
-                "$id": "380",
+                "$id": "382",
                 "Visible": {
-                  "$id": "381",
+                  "$id": "383",
                   "Formula": {
-                    "$id": "382",
+                    "$id": "384",
                     "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),1,0)"
                   },
                   "Mode": 2,
@@ -4446,7 +4462,7 @@
               }
             },
             {
-              "$id": "383",
+              "$id": "385",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -4457,7 +4473,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "384",
+                "$id": "386",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -4468,17 +4484,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "385"
+                  "$id": "387"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "386",
+                "$id": "388",
                 "$values": [
                   {
-                    "$id": "387",
+                    "$id": "389",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -4488,7 +4504,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "388",
+                      "$id": "390",
                       "BorderColor": "#FF808080",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -4499,7 +4515,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "389"
+                        "$id": "391"
                       }
                     },
                     "Height": 70.0,
@@ -4522,12 +4538,12 @@
                     "RenderingSkip": 0,
                     "Sid": 21,
                     "Bindings": {
-                      "$id": "390",
+                      "$id": "392",
                       "BackgroundColor": {
-                        "$id": "391",
+                        "$id": "393",
                         "Formula": {
-                          "$id": "392",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                          "$id": "394",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4542,7 +4558,7 @@
                     }
                   },
                   {
-                    "$id": "393",
+                    "$id": "395",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -4571,7 +4587,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "394",
+                      "$id": "396",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -4582,7 +4598,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "395"
+                        "$id": "397"
                       }
                     },
                     "Height": 20.0,
@@ -4605,12 +4621,12 @@
                     "RenderingSkip": 0,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "396",
+                      "$id": "398",
                       "BackgroundColor": {
-                        "$id": "397",
+                        "$id": "399",
                         "Formula": {
-                          "$id": "398",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                          "$id": "400",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
                         },
                         "StartColor": "#FF171717",
                         "EnableMiddleColor": false,
@@ -4623,10 +4639,10 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "399",
+                        "$id": "401",
                         "Formula": {
-                          "$id": "400",
-                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain]<120,1,0)"
+                          "$id": "402",
+                          "Expression": "if([DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]<3,1,0)"
                         },
                         "StartColor": "#FF808080",
                         "EnableMiddleColor": false,
@@ -4641,7 +4657,7 @@
                     }
                   },
                   {
-                    "$id": "401",
+                    "$id": "403",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -4670,7 +4686,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "402",
+                      "$id": "404",
                       "BorderColor": "#FF778899",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -4681,7 +4697,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "403"
+                        "$id": "405"
                       }
                     },
                     "Height": 70.0,
@@ -4704,11 +4720,11 @@
                     "RenderingSkip": 12,
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "404",
+                      "$id": "406",
                       "Text": {
-                        "$id": "405",
+                        "$id": "407",
                         "Formula": {
-                          "$id": "406",
+                          "$id": "408",
                           "Expression": "[DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]"
                         },
                         "Mode": 2,
@@ -4737,11 +4753,11 @@
               "Name": "Laps Left",
               "Sid": 0,
               "Bindings": {
-                "$id": "407",
+                "$id": "409",
                 "Visible": {
-                  "$id": "408",
+                  "$id": "410",
                   "Formula": {
-                    "$id": "409",
+                    "$id": "411",
                     "Expression": "if(\r\n(isnull([DataCorePlugin.GameRawData.Telemetry.SessionTimeRemain],0)<>604800),0,1)"
                   },
                   "Mode": 2,
@@ -4755,7 +4771,7 @@
         "Name": "Dashboard",
         "Sid": 0,
         "Bindings": {
-          "$id": "410"
+          "$id": "412"
         }
       }
     ]
@@ -4765,13 +4781,13 @@
   "ShowBoundingRectangles": false,
   "GridSize": 10,
   "SelectedScreen": {
-    "$ref": "3"
+    "$ref": "11"
   },
   "Images": {
-    "$id": "411",
+    "$id": "413",
     "$values": [
       {
-        "$id": "412",
+        "$id": "414",
         "Name": "fuzzwah-racing",
         "Extension": ".png",
         "Optimized": true,
@@ -4780,19 +4796,19 @@
     ]
   },
   "Metadata": {
-    "$id": "413",
+    "$id": "415",
     "Category": "Fuzzwah",
     "Description": "Fuzzwah",
     "Author": "Fuzzwah",
     "ScreenCount": 2.0,
     "InGameScreensIndexs": {
-      "$id": "414",
+      "$id": "416",
       "$values": [
         1
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "415",
+      "$id": "417",
       "$values": [
         0
       ]
@@ -4806,7 +4822,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "416",
+      "$id": "418",
       "$values": []
     }
   },
