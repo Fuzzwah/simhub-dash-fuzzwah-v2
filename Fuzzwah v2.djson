@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "6d64e1e6-c133-413e-8ba6-3937303e241f",
+  "Id": "18842524-14b1-4301-9cba-3b1bbed5a8e9",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -21,7 +21,7 @@
         },
         "BackgroundColor": "#FF111111",
         "Background": "fuzzwah-racing",
-        "IsSelected": false,
+        "IsSelected": true,
         "Items": {
           "$id": "5",
           "$values": [
@@ -84,7 +84,7 @@
               "BorderTop": 0,
               "Id": "3590f153-5a4f-4668-8647-f24786aa8a60",
               "IsFreezed": false,
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "Version",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -113,7 +113,7 @@
           "Interpreter": 1
         },
         "BackgroundColor": "#FF000000",
-        "IsSelected": true,
+        "IsSelected": false,
         "Items": {
           "$id": "13",
           "$values": [
@@ -295,7 +295,7 @@
                     "Left": 0.0,
                     "Opacity": 100.0,
                     "Top": 72.0,
-                    "Visible": true,
+                    "Visible": false,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "Width": 275.0,
@@ -722,7 +722,7 @@
                     "Left": 0.0,
                     "Opacity": 100.0,
                     "Top": 72.0,
-                    "Visible": false,
+                    "Visible": true,
                     "BlinkDelay": 250.0,
                     "BlinkEnabled": false,
                     "Width": 275.0,
@@ -733,7 +733,7 @@
                     "BorderTop": 0,
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Left Page (LMP2)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -3481,7 +3481,7 @@
                     "BorderTop": 0,
                     "Id": "c6e9aacb-b47d-45a9-aa19-2b22dd07b2bd",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Right Page",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -4781,7 +4781,7 @@
   "ShowBoundingRectangles": false,
   "GridSize": 10,
   "SelectedScreen": {
-    "$ref": "11"
+    "$ref": "3"
   },
   "Images": {
     "$id": "413",

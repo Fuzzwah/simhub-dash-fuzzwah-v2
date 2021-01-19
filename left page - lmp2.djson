@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "ed9f290f-a684-4785-adfb-d4fa0b281bef",
+  "Id": "105ee12d-7e56-4429-9e76-1c83bb6bffd0",
   "BaseHeight": 195,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -265,7 +265,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Throttle (Raw)",
               "Sid": 20,
               "Bindings": {
@@ -530,7 +530,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "48",
-                          "Expression": "replace(isnull([DataCorePlugin.GameRawData.SessionData.CarSetup.BrakesDriveUnit.TractionControl.TractionControlGain],0),' (TC)','')"
+                          "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl],0)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -808,7 +808,7 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Slip",
                     "RenderingSkip": 0,
                     "Sid": 11,
@@ -819,7 +819,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "73",
-                          "Expression": "replace(isnull([DataCorePlugin.GameRawData.SessionData.CarSetup.BrakesDriveUnit.TractionControl.TractionControlSlip],0),' (TC)','')"
+                          "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl2],0)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
