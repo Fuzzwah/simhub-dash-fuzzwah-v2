@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "c6f56b7d-d97f-487a-a540-97e44b829a0f",
+  "Id": "9615fbd9-2975-4c3e-9c7e-3b4b8abe2a29",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -778,7 +778,7 @@
                               "FormatString": "0.00",
                               "Formula": {
                                 "$id": "67",
-                                "Expression": "[DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct] * 100"
+                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
                               },
                               "Mode": 2,
                               "TargetPropertyName": "Text"
@@ -845,7 +845,7 @@
                               "$id": "72",
                               "Formula": {
                                 "$id": "73",
-                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct] * 100,0)"
+                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
                               },
                               "Mode": 2,
                               "TargetPropertyName": "Value"
@@ -1083,7 +1083,7 @@
                               "$id": "91",
                               "Formula": {
                                 "$id": "92",
-                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct] * 100,0)"
+                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                               },
                               "Mode": 2,
                               "TargetPropertyName": "Value"
@@ -1160,7 +1160,7 @@
                               "FormatString": "0.00",
                               "Formula": {
                                 "$id": "98",
-                                "Expression": "[DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct] * 100"
+                                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                               },
                               "Mode": 2,
                               "TargetPropertyName": "Text"
@@ -1208,7 +1208,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "14afbc68-ad07-4d5c-bc6d-7e7e52b3c839",
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "Hybrid",
               "Sid": 0,
               "Bindings": {
@@ -1758,7 +1758,7 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Laps Since Pit",
                     "RenderingSkip": 0,
                     "Sid": 27,

@@ -91,7 +91,7 @@
                   "FormatString": "0.00",
                   "Formula": {
                     "$id": "11",
-                    "Expression": "[DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct] * 100"
+                    "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Text"
@@ -161,7 +161,7 @@
                   "$id": "16",
                   "Formula": {
                     "$id": "17",
-                    "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct] * 100,0)"
+                    "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Value"

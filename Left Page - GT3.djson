@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "98b65ed5-8727-4933-9ddb-899c1e2f6a8e",
+  "Id": "8121c2df-5e97-422f-bff1-dc9406381c99",
   "BaseHeight": 195,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -539,7 +539,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "50",
-                          "Expression": "isnull([DataCorePlugin.GameData.NewData.TCLevel],0)"
+                          "Expression": "isnull([DataCorePlugin.GameData.TCLevel],0)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -563,7 +563,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "TC",
               "Sid": 8,
               "Bindings": {
@@ -572,7 +572,7 @@
                   "$id": "52",
                   "Formula": {
                     "$id": "53",
-                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl],'null')!='null' & isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl2],'null')='null',1,0)"
+                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.dcTractionControl],'null')='null',0,1)"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -1331,7 +1331,7 @@
                     "BorderTop": 0,
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "BB (Raw)",
                     "RenderingSkip": 0,
                     "Sid": 15,

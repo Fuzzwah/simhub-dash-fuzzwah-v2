@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "6874e60e-ab09-4048-b1a1-1017fd173240",
+  "Id": "a94feb3f-8a8f-4107-afca-a7c13859febf",
   "BaseHeight": 70,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -36,9 +36,9 @@
               "GaugeColor": "#FF246FB7",
               "Minimum": 0.0,
               "Maximum": 30.0,
-              "Value": 15.0,
+              "Value": 20.0,
               "Steps": 0.0,
-              "PAW": 400.0,
+              "PAW": 533.0,
               "Rotation": 0.0,
               "UseRotation": false,
               "CanResize": true,
@@ -60,10 +60,10 @@
                   "$id": "8"
                 }
               },
-              "Height": 70.0,
+              "Height": 36.0,
               "Left": 0.0,
               "Opacity": 100.0,
-              "Top": 0.0,
+              "Top": 34.0,
               "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
@@ -75,7 +75,7 @@
               "BorderTop": 1,
               "Id": "c42724c7-a24b-4702-8fbe-2f22912f1362",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Bar",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -94,43 +94,21 @@
             },
             {
               "$id": "12",
-              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.BuiltIn.RPMText, SimHub.Plugins",
-              "Category": "Engine",
-              "Format": "0",
-              "NoDataText": "0",
-              "TextAfterValue": " rpm",
-              "IsTextItem": true,
-              "ShadowDepth": 0,
-              "ShadowBlur": 0,
-              "ShadowDirection": 315,
-              "ShadowColor": "#FF808080",
-              "Font": "Droid Sans",
-              "FontWeight": "Bold",
-              "TextWrapping": 1,
-              "FontStyle": "Normal",
-              "FontSize": 45.0,
-              "TextColor": "#FFFFD700",
-              "HorizontalAlignment": 2,
-              "VerticalAlignment": 0,
-              "UseMonospacedText": false,
-              "CharWidth": 40.0,
-              "SpecialCharsWidth": 20.0,
-              "SpecialChars": ".,:;",
-              "TextMask": "",
-              "TextMaskColor": "#FF808080",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
               "Rotation": 0.0,
               "UseRotation": false,
               "CanResize": true,
-              "BackgroundColor": "#00FFFFFF",
+              "BackgroundColor": "#FFFFD700",
               "BlurRadius": 0.0,
               "EnableBlur": false,
               "BorderStyle": {
                 "$id": "13",
-                "BorderColor": "#FF000000",
-                "BorderTop": 0,
-                "BorderBottom": 0,
-                "BorderLeft": 0,
-                "BorderRight": 0,
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
                 "RadiusTopLeft": 0,
                 "RadiusTopRight": 0,
                 "RadiusBottomLeft": 0,
@@ -139,27 +117,491 @@
                   "$id": "14"
                 }
               },
-              "Height": 57.0,
-              "Left": 284.0,
+              "Height": 35.0,
+              "Left": 0.0,
               "Opacity": 100.0,
-              "Top": 12.0,
-              "Visible": false,
+              "Top": 0.0,
+              "Visible": true,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
-              "Width": 240.0,
-              "BorderBottom": 0,
-              "BorderColor": "#FF000000",
-              "BorderLeft": 0,
-              "BorderRight": 0,
-              "BorderTop": 0,
-              "Id": "141872c5-e0ad-4483-959c-5bf81f3231cc",
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
               "IsFreezed": false,
               "IsSelected": false,
-              "Name": "RPM",
+              "Name": "Yellow 1",
               "RenderingSkip": 0,
-              "Sid": 2,
+              "Sid": 0,
               "Bindings": {
-                "$id": "15"
+                "$id": "15",
+                "BackgroundColor": {
+                  "$id": "16",
+                  "Formula": {
+                    "$id": "17",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM],1,0)"
+                  },
+                  "StartColor": "#00FFFFFF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFFD700",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "18",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FFFFFF00",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "19",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "20"
+                }
+              },
+              "Height": 35.0,
+              "Left": 100.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Yellow 2",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "21",
+                "BackgroundColor": {
+                  "$id": "22",
+                  "Formula": {
+                    "$id": "23",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + (([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7),1,0)"
+                  },
+                  "StartColor": "#00FFFFFF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFFFF00",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "24",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FFDC143C",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "25",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "26"
+                }
+              },
+              "Height": 35.0,
+              "Left": 200.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Red 1",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "27",
+                "BackgroundColor": {
+                  "$id": "28",
+                  "Formula": {
+                    "$id": "29",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 2),1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFDC143C",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "30",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FFFF0000",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "31",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "32"
+                }
+              },
+              "Height": 35.0,
+              "Left": 300.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Red 2",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "33",
+                "BackgroundColor": {
+                  "$id": "34",
+                  "Formula": {
+                    "$id": "35",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 3),1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF0000",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "36",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FF00008B",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "37",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "38"
+                }
+              },
+              "Height": 35.0,
+              "Left": 400.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Blue 1",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "39",
+                "BackgroundColor": {
+                  "$id": "40",
+                  "Formula": {
+                    "$id": "41",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 4),1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FF0000FF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "42",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FF0000FF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "43",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "44"
+                }
+              },
+              "Height": 35.0,
+              "Left": 500.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Blue 2",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "45",
+                "BackgroundColor": {
+                  "$id": "46",
+                  "Formula": {
+                    "$id": "47",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 5),1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FF0000FF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "48",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FF800080",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "49",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "50"
+                }
+              },
+              "Height": 35.0,
+              "Left": 600.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Purple 1",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "51",
+                "BackgroundColor": {
+                  "$id": "52",
+                  "Formula": {
+                    "$id": "53",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 6),1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FF800080",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$id": "54",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FFFF00FF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "55",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "56"
+                }
+              },
+              "Height": 35.0,
+              "Left": 700.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 100.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "8ce30460-6014-4b5b-8119-5d92234b0956",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "Purple 2",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "57",
+                "BackgroundColor": {
+                  "$id": "58",
+                  "Formula": {
+                    "$id": "59",
+                    "Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM],1,0)"
+                  },
+                  "StartColor": "#FF000000",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFF00FF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
               }
             }
           ]
@@ -168,7 +610,7 @@
         "Name": "Screen1",
         "Sid": 0,
         "Bindings": {
-          "$id": "16"
+          "$id": "60"
         }
       }
     ]
@@ -181,10 +623,10 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "17",
+    "$id": "61",
     "$values": [
       {
-        "$id": "18",
+        "$id": "62",
         "Name": "RPM Bar multicoloured",
         "Extension": ".png",
         "Optimized": true,
@@ -193,16 +635,16 @@
     ]
   },
   "Metadata": {
-    "$id": "19",
+    "$id": "63",
     "ScreenCount": 1.0,
     "InGameScreensIndexs": {
-      "$id": "20",
+      "$id": "64",
       "$values": [
         0
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "21",
+      "$id": "65",
       "$values": []
     },
     "MainPreviewIndex": 0,
@@ -214,7 +656,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "22",
+      "$id": "66",
       "$values": []
     }
   },
