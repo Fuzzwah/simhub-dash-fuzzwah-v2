@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "874bd168-5dd8-4ba1-a828-9950ec29e72f",
+  "Id": "261233b1-be09-44da-a790-c31c7963eacb",
   "BaseHeight": 450,
   "BaseWidth": 800,
   "BackgroundColor": "#FF000000",
@@ -38,7 +38,7 @@
               "TextWrapping": 1,
               "FontStyle": "Normal",
               "FontSize": 16.0,
-              "Text": "v2.8.8",
+              "Text": "v2.9.0",
               "TextColor": "#FF008080",
               "HorizontalAlignment": 0,
               "VerticalAlignment": 0,
@@ -161,7 +161,7 @@
               "BorderTop": 0,
               "Id": "af9ade5e-87e3-4e89-ab98-0a30c1fa27f1",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "RPM Bar",
               "RenderingSkip": 0,
               "Sid": 10,
@@ -245,7 +245,7 @@
                     "BorderTop": 0,
                     "Id": "bdd77990-20c1-4149-8730-467ce06fd457",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Left Page (Simple)",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -255,7 +255,7 @@
                         "$id": "26",
                         "Formula": {
                           "$id": "27",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R'),0,1)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ferrari 488 GT3 Evo 2020','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R','Supercars Ford Mustang GT','Supercars Holden ZB Commodore'),0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -264,7 +264,7 @@
                         "$id": "28",
                         "Formula": {
                           "$id": "29",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R'),1,0)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Ferrari 488 GTE','Porsche 911 RSR','Ford GT - 2017','BMW M8 GTE','Chevrolet Corvette C8.R','Holden','Ford Falcon FG V8','Williams-Toyota FW31','Dallara IR18','Porsche 919 2016','Formula Renault 3.5','Dallara P217 LMP2','Dallara IR01','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R','Supercars Ford Mustang GT','Supercars Holden ZB Commodore'),1,0)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "RenderingSkip"
@@ -465,7 +465,7 @@
                         "$id": "50",
                         "Formula": {
                           "$id": "51",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ford GT GT3','Mercedes AMG GT3','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R')"
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'McLaren MP4-12C GT3','Audi R8 LMS','BMW Z4 GT3','Ferrari 488 GT3','Ferrari 488 GT3 Evo 2020','Ford GT GT3','Mercedes AMG GT3','Lamborghini Huracan GT3 EVO','BMW M4 GT3','Porsche 911 GT3.R')"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -675,7 +675,7 @@
                         "$id": "74",
                         "Formula": {
                           "$id": "75",
-                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Holden','Ford Falcon FG V8')"
+                          "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Holden','Ford Falcon FG V8','Supercars Ford Mustang GT','Supercars Holden ZB Commodore')"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Visible"
@@ -684,7 +684,7 @@
                         "$id": "76",
                         "Formula": {
                           "$id": "77",
-                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Holden','Ford Falcon FG V8'),0,1)"
+                          "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Holden','Ford Falcon FG V8','Supercars Ford Mustang GT','Supercars Holden ZB Commodore'),0,1)"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "RenderingSkip"
@@ -4885,7 +4885,7 @@
                         "$id": "435",
                         "Formula": {
                           "$id": "436",
-                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain]"
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.SessionLapsRemain] + 1"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
