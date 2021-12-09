@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "d04b533b-1d99-4b79-9cb6-f075ba149adf",
+  "Id": "7cac70c8-dfde-42f9-a7fb-c454d2483dad",
   "BaseHeight": 70,
   "BaseWidth": 520,
   "BackgroundColor": "#FF000000",
@@ -251,7 +251,7 @@
               "BorderTop": 0,
               "Id": "9dbfd880-fc6b-47fd-b24b-b50be7ddeb91",
               "IsFreezed": false,
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "High Oil Temp",
               "RenderingSkip": 0,
               "Sid": 10,
@@ -261,7 +261,7 @@
                   "$id": "28",
                   "Formula": {
                     "$id": "29",
-                    "Expression": "isincreasing(4000,[DataCorePlugin.GameData.NewData.OilTemperature]>120)"
+                    "Expression": "isincreasing(4000,[DataCorePlugin.GameData.NewData.OilTemperature]>130)"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -551,7 +551,7 @@
                     "RepeatLeftOffset": 0.0,
                     "RepeatTopOffset": 30.0,
                     "Height": 75.0,
-                    "Width": 800.0,
+                    "Width": 520.0,
                     "BackgroundColor": "#00FFFFFF",
                     "BlurRadius": 0.0,
                     "Rotation": 0.0,
@@ -1136,7 +1136,7 @@
               "RepeatLeftOffset": 0.0,
               "RepeatTopOffset": 30.0,
               "Height": 75.0,
-              "Width": 800.0,
+              "Width": 520.0,
               "BackgroundColor": "#00FFFFFF",
               "BlurRadius": 0.0,
               "Rotation": 0.0,
@@ -1354,7 +1354,7 @@
                     "BorderTop": 0,
                     "Id": "70930b29-4e1f-4ef0-b5a6-6e5de4b8e48a",
                     "IsFreezed": false,
-                    "IsSelected": true,
+                    "IsSelected": false,
                     "Name": "Tow Time",
                     "RenderingSkip": 0,
                     "Sid": 0,
@@ -1504,7 +1504,7 @@
     "MainPreviewIndex": 0,
     "IsOverlay": false,
     "ShowInTaskBar": true,
-    "Width": 800.0,
+    "Width": 520.0,
     "Height": 70.0,
     "OverlaySizeWarning": false,
     "MetadataVersion": 2.0,

@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "9615fbd9-2975-4c3e-9c7e-3b4b8abe2a29",
+  "Id": "4d3b9787-c0e9-46db-8d64-9ac909eab0f0",
   "BaseHeight": 300,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -11,7 +11,6 @@
       {
         "$id": "3",
         "RenderingSkip": 0,
-        "IsFreezed": false,
         "InGameScreen": true,
         "IdleScreen": false,
         "PitScreen": false,
@@ -256,7 +255,7 @@
               "Left": 0.0,
               "Opacity": 100.0,
               "Top": 0.0,
-              "Visible": true,
+              "Visible": false,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
               "BorderBottom": 0,
@@ -269,11 +268,20 @@
               "Name": "Max Speed",
               "Sid": 0,
               "Bindings": {
-                "$id": "24"
+                "$id": "24",
+                "Visible": {
+                  "$id": "25",
+                  "Formula": {
+                    "$id": "26",
+                    "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016','Mercedes W12'),false,true)"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
               }
             },
             {
-              "$id": "25",
+              "$id": "27",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -284,7 +292,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "26",
+                "$id": "28",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -295,17 +303,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "27"
+                  "$id": "29"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "28",
+                "$id": "30",
                 "$values": [
                   {
-                    "$id": "29",
+                    "$id": "31",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -315,7 +323,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "30",
+                      "$id": "32",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -326,7 +334,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "31"
+                        "$id": "33"
                       }
                     },
                     "Height": 95.0,
@@ -349,11 +357,11 @@
                     "RenderingSkip": 0,
                     "Sid": 1,
                     "Bindings": {
-                      "$id": "32"
+                      "$id": "34"
                     }
                   },
                   {
-                    "$id": "33",
+                    "$id": "35",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -382,7 +390,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "34",
+                      "$id": "36",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -393,7 +401,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "35"
+                        "$id": "37"
                       }
                     },
                     "Height": 25.0,
@@ -416,11 +424,11 @@
                     "RenderingSkip": 0,
                     "Sid": 2,
                     "Bindings": {
-                      "$id": "36"
+                      "$id": "38"
                     }
                   },
                   {
-                    "$id": "37",
+                    "$id": "39",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -449,7 +457,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "38",
+                      "$id": "40",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -460,7 +468,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "39"
+                        "$id": "41"
                       }
                     },
                     "Height": 80.0,
@@ -483,12 +491,12 @@
                     "RenderingSkip": 0,
                     "Sid": 3,
                     "Bindings": {
-                      "$id": "40",
+                      "$id": "42",
                       "Text": {
-                        "$id": "41",
+                        "$id": "43",
                         "FormatString": "0",
                         "Formula": {
-                          "$id": "42",
+                          "$id": "44",
                           "Expression": "round(\r\nmaximum(20000,isnull(([DataCorePlugin.GameData.NewData.FilteredSpeedLocal]*-1),0))*-1\r\n,0)"
                         },
                         "Mode": 2,
@@ -504,7 +512,7 @@
               "Left": 140.0,
               "Opacity": 100.0,
               "Top": 0.0,
-              "Visible": true,
+              "Visible": false,
               "BlinkDelay": 250.0,
               "BlinkEnabled": false,
               "BorderBottom": 0,
@@ -517,12 +525,12 @@
               "Name": "Min Speed",
               "Sid": 0,
               "Bindings": {
-                "$id": "43",
+                "$id": "45",
                 "Visible": {
-                  "$id": "44",
+                  "$id": "46",
                   "Formula": {
-                    "$id": "45",
-                    "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016'),0,1)"
+                    "$id": "47",
+                    "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016','Mercedes W12'),false,true)"
                   },
                   "Mode": 2,
                   "TargetPropertyName": "Visible"
@@ -530,18 +538,18 @@
               }
             },
             {
-              "$id": "46",
+              "$id": "48",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
               "RepeatTopOffset": 30.0,
-              "Height": 199.0,
+              "Height": 204.0,
               "Width": 275.0,
               "BackgroundColor": "#00FFFFFF",
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "47",
+                "$id": "49",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -552,28 +560,28 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "48"
+                  "$id": "50"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "49",
+                "$id": "51",
                 "$values": [
                   {
-                    "$id": "50",
+                    "$id": "52",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
                     "Repetitions": 0.0,
                     "RepeatLeftOffset": 0.0,
                     "RepeatTopOffset": 30.0,
-                    "Height": 99.0,
+                    "Height": 104.0,
                     "Width": 275.0,
                     "BackgroundColor": "#00FFFFFF",
                     "BlurRadius": 0.0,
                     "Rotation": 0.0,
                     "BorderStyle": {
-                      "$id": "51",
+                      "$id": "53",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -584,17 +592,17 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "52"
+                        "$id": "54"
                       }
                     },
                     "RenderingSkip": 0,
                     "ShowSelection": false,
                     "CanResize": false,
                     "Childrens": {
-                      "$id": "53",
+                      "$id": "55",
                       "$values": [
                         {
-                          "$id": "54",
+                          "$id": "56",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                           "IsRectangleItem": true,
                           "Rotation": 0.0,
@@ -604,7 +612,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "55",
+                            "$id": "57",
                             "BorderColor": "#FFF08080",
                             "BorderTop": 4,
                             "BorderBottom": 4,
@@ -615,10 +623,10 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "56"
+                              "$id": "58"
                             }
                           },
-                          "Height": 90.0,
+                          "Height": 95.0,
                           "Left": 0.0,
                           "Opacity": 100.0,
                           "Top": 5.0,
@@ -638,11 +646,11 @@
                           "RenderingSkip": 0,
                           "Sid": 1,
                           "Bindings": {
-                            "$id": "57"
+                            "$id": "59"
                           }
                         },
                         {
-                          "$id": "58",
+                          "$id": "60",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                           "IsTextItem": true,
                           "ShadowDepth": 0,
@@ -671,7 +679,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "59",
+                            "$id": "61",
                             "BorderColor": "#FFFFFFFF",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -682,7 +690,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "60"
+                              "$id": "62"
                             }
                           },
                           "Height": 25.0,
@@ -705,11 +713,11 @@
                           "RenderingSkip": 0,
                           "Sid": 2,
                           "Bindings": {
-                            "$id": "61"
+                            "$id": "63"
                           }
                         },
                         {
-                          "$id": "62",
+                          "$id": "64",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                           "IsTextItem": true,
                           "ShadowDepth": 0,
@@ -738,7 +746,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "63",
+                            "$id": "65",
                             "BorderColor": "#FFFFFFFF",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -749,7 +757,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "64"
+                              "$id": "66"
                             }
                           },
                           "Height": 75.0,
@@ -772,12 +780,12 @@
                           "RenderingSkip": 0,
                           "Sid": 3,
                           "Bindings": {
-                            "$id": "65",
+                            "$id": "67",
                             "Text": {
-                              "$id": "66",
+                              "$id": "68",
                               "FormatString": "0.00",
                               "Formula": {
-                                "$id": "67",
+                                "$id": "69",
                                 "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
                               },
                               "Mode": 2,
@@ -786,7 +794,7 @@
                           }
                         },
                         {
-                          "$id": "68",
+                          "$id": "70",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.LinearGaugeItem, SimHub.Plugins",
                           "IsLinearGauge": true,
                           "GaugeAlignment": 0,
@@ -806,7 +814,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "69",
+                            "$id": "71",
                             "BorderColor": "#FF000000",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -817,7 +825,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "70"
+                              "$id": "72"
                             }
                           },
                           "Height": 70.0,
@@ -840,11 +848,11 @@
                           "RenderingSkip": 0,
                           "Sid": 0,
                           "Bindings": {
-                            "$id": "71",
+                            "$id": "73",
                             "Value": {
-                              "$id": "72",
+                              "$id": "74",
                               "Formula": {
-                                "$id": "73",
+                                "$id": "75",
                                 "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
                               },
                               "Mode": 2,
@@ -873,22 +881,22 @@
                     "Name": "Charge",
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "74"
+                      "$id": "76"
                     }
                   },
                   {
-                    "$id": "75",
+                    "$id": "77",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
                     "Repetitions": 0.0,
                     "RepeatLeftOffset": 0.0,
                     "RepeatTopOffset": 30.0,
-                    "Height": 95.0,
+                    "Height": 100.0,
                     "Width": 275.0,
                     "BackgroundColor": "#00FFFFFF",
                     "BlurRadius": 0.0,
                     "Rotation": 0.0,
                     "BorderStyle": {
-                      "$id": "76",
+                      "$id": "78",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -899,17 +907,17 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "77"
+                        "$id": "79"
                       }
                     },
                     "RenderingSkip": 0,
                     "ShowSelection": false,
                     "CanResize": false,
                     "Childrens": {
-                      "$id": "78",
+                      "$id": "80",
                       "$values": [
                         {
-                          "$id": "79",
+                          "$id": "81",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                           "IsRectangleItem": true,
                           "Rotation": 0.0,
@@ -919,7 +927,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "80",
+                            "$id": "82",
                             "BorderColor": "#FF4169E1",
                             "BorderTop": 4,
                             "BorderBottom": 4,
@@ -930,10 +938,10 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "81"
+                              "$id": "83"
                             }
                           },
-                          "Height": 90.0,
+                          "Height": 95.0,
                           "Left": 0.0,
                           "Opacity": 100.0,
                           "Top": 105.0,
@@ -953,11 +961,11 @@
                           "RenderingSkip": 0,
                           "Sid": 1,
                           "Bindings": {
-                            "$id": "82"
+                            "$id": "84"
                           }
                         },
                         {
-                          "$id": "83",
+                          "$id": "85",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                           "IsTextItem": true,
                           "ShadowDepth": 0,
@@ -986,7 +994,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "84",
+                            "$id": "86",
                             "BorderColor": "#FFFFFFFF",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -997,7 +1005,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "85"
+                              "$id": "87"
                             }
                           },
                           "Height": 25.0,
@@ -1020,11 +1028,11 @@
                           "RenderingSkip": 0,
                           "Sid": 2,
                           "Bindings": {
-                            "$id": "86"
+                            "$id": "88"
                           }
                         },
                         {
-                          "$id": "87",
+                          "$id": "89",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.LinearGaugeItem, SimHub.Plugins",
                           "IsLinearGauge": true,
                           "GaugeAlignment": 0,
@@ -1044,7 +1052,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "88",
+                            "$id": "90",
                             "BorderColor": "#FF000000",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -1055,7 +1063,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "89"
+                              "$id": "91"
                             }
                           },
                           "Height": 70.0,
@@ -1078,11 +1086,11 @@
                           "RenderingSkip": 0,
                           "Sid": 0,
                           "Bindings": {
-                            "$id": "90",
+                            "$id": "92",
                             "Value": {
-                              "$id": "91",
+                              "$id": "93",
                               "Formula": {
-                                "$id": "92",
+                                "$id": "94",
                                 "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                               },
                               "Mode": 2,
@@ -1091,7 +1099,7 @@
                           }
                         },
                         {
-                          "$id": "93",
+                          "$id": "95",
                           "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                           "IsTextItem": true,
                           "ShadowDepth": 0,
@@ -1120,7 +1128,7 @@
                           "BlurRadius": 0.0,
                           "EnableBlur": false,
                           "BorderStyle": {
-                            "$id": "94",
+                            "$id": "96",
                             "BorderColor": "#FFFFFFFF",
                             "BorderTop": 0,
                             "BorderBottom": 0,
@@ -1131,7 +1139,7 @@
                             "RadiusBottomLeft": 0,
                             "RadiusBottomRight": 0,
                             "Bindings": {
-                              "$id": "95"
+                              "$id": "97"
                             }
                           },
                           "Height": 75.0,
@@ -1154,12 +1162,12 @@
                           "RenderingSkip": 0,
                           "Sid": 3,
                           "Bindings": {
-                            "$id": "96",
+                            "$id": "98",
                             "Text": {
-                              "$id": "97",
+                              "$id": "99",
                               "FormatString": "0.00",
                               "Formula": {
-                                "$id": "98",
+                                "$id": "100",
                                 "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyMGU_KLapDeployPct],0) * 100"
                               },
                               "Mode": 2,
@@ -1188,7 +1196,7 @@
                     "Name": "Deployment",
                     "Sid": 0,
                     "Bindings": {
-                      "$id": "99"
+                      "$id": "101"
                     }
                   }
                 ]
@@ -1208,15 +1216,15 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "14afbc68-ad07-4d5c-bc6d-7e7e52b3c839",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Hybrid",
               "Sid": 0,
               "Bindings": {
-                "$id": "100",
+                "$id": "102",
                 "Visible": {
-                  "$id": "101",
+                  "$id": "103",
                   "Formula": {
-                    "$id": "102",
+                    "$id": "104",
                     "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016')"
                   },
                   "Mode": 2,
@@ -1225,7 +1233,7 @@
               }
             },
             {
-              "$id": "103",
+              "$id": "105",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1236,7 +1244,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "104",
+                "$id": "106",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1247,17 +1255,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "105"
+                  "$id": "107"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "106",
+                "$id": "108",
                 "$values": [
                   {
-                    "$id": "107",
+                    "$id": "109",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1267,7 +1275,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "108",
+                      "$id": "110",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -1278,11 +1286,11 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "109",
+                        "$id": "111",
                         "BorderColor": {
-                          "$id": "110",
+                          "$id": "112",
                           "Formula": {
-                            "$id": "111",
+                            "$id": "113",
                             "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                           },
                           "StartColor": "#FF008000",
@@ -1317,11 +1325,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "112",
+                      "$id": "114",
                       "BackgroundColor": {
-                        "$id": "113",
+                        "$id": "115",
                         "Formula": {
-                          "$id": "114",
+                          "$id": "116",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF171717",
@@ -1337,7 +1345,7 @@
                     }
                   },
                   {
-                    "$id": "115",
+                    "$id": "117",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1366,7 +1374,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "116",
+                      "$id": "118",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1377,7 +1385,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "117"
+                        "$id": "119"
                       }
                     },
                     "Height": 23.0,
@@ -1400,11 +1408,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "118",
+                      "$id": "120",
                       "BackgroundColor": {
-                        "$id": "119",
+                        "$id": "121",
                         "Formula": {
-                          "$id": "120",
+                          "$id": "122",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -1418,9 +1426,9 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "121",
+                        "$id": "123",
                         "Formula": {
-                          "$id": "122",
+                          "$id": "124",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF008000",
@@ -1436,7 +1444,7 @@
                     }
                   },
                   {
-                    "$id": "123",
+                    "$id": "125",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1465,7 +1473,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "124",
+                      "$id": "126",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1476,7 +1484,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "125"
+                        "$id": "127"
                       }
                     },
                     "Height": 70.0,
@@ -1499,21 +1507,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "126",
+                      "$id": "128",
                       "Text": {
-                        "$id": "127",
+                        "$id": "129",
                         "FormatString": "0.0",
                         "Formula": {
-                          "$id": "128",
+                          "$id": "130",
                           "Expression": "if(isnull([DataCorePlugin.GameData.Fuel],'')=0,'-',[DataCorePlugin.GameData.Fuel])"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "129",
+                        "$id": "131",
                         "Formula": {
-                          "$id": "130",
+                          "$id": "132",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF32CD32",
@@ -1549,11 +1557,20 @@
               "Name": "Fuel Left",
               "Sid": 24,
               "Bindings": {
-                "$id": "131"
+                "$id": "133",
+                "Visible": {
+                  "$id": "134",
+                  "Formula": {
+                    "$id": "135",
+                    "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016'),false,true)"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
               }
             },
             {
-              "$id": "132",
+              "$id": "136",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1564,7 +1581,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "133",
+                "$id": "137",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1575,17 +1592,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "134"
+                  "$id": "138"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "135",
+                "$id": "139",
                 "$values": [
                   {
-                    "$id": "136",
+                    "$id": "140",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1595,7 +1612,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "137",
+                      "$id": "141",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -1606,7 +1623,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "138"
+                        "$id": "142"
                       }
                     },
                     "Height": 95.0,
@@ -1629,11 +1646,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "139"
+                      "$id": "143"
                     }
                   },
                   {
-                    "$id": "140",
+                    "$id": "144",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1662,7 +1679,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "141",
+                      "$id": "145",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1673,7 +1690,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "142"
+                        "$id": "146"
                       }
                     },
                     "Height": 23.0,
@@ -1696,11 +1713,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "143"
+                      "$id": "147"
                     }
                   },
                   {
-                    "$id": "144",
+                    "$id": "148",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1729,7 +1746,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "145",
+                      "$id": "149",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1740,7 +1757,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "146"
+                        "$id": "150"
                       }
                     },
                     "Height": 70.0,
@@ -1763,21 +1780,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "147",
+                      "$id": "151",
                       "Text": {
-                        "$id": "148",
+                        "$id": "152",
                         "FormatString": "0",
                         "Formula": {
-                          "$id": "149",
+                          "$id": "153",
                           "Expression": "if(isnull([IRacingExtraProperties.iRacing_Player_LapsSinceLastPit],'0')=0,'1',[IRacingExtraProperties.iRacing_Player_LapsSinceLastPit])"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "FontSize": {
-                        "$id": "150",
+                        "$id": "154",
                         "Formula": {
-                          "$id": "151",
+                          "$id": "155",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
                         },
                         "Mode": 2,
@@ -1806,11 +1823,20 @@
               "Name": "Since Pit",
               "Sid": 24,
               "Bindings": {
-                "$id": "152"
+                "$id": "156",
+                "Visible": {
+                  "$id": "157",
+                  "Formula": {
+                    "$id": "158",
+                    "Expression": "if(in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Porsche 919 2016'),false,true)"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
               }
             },
             {
-              "$id": "153",
+              "$id": "159",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1821,7 +1847,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "154",
+                "$id": "160",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1832,17 +1858,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "155"
+                  "$id": "161"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "156",
+                "$id": "162",
                 "$values": [
                   {
-                    "$id": "157",
+                    "$id": "163",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1852,7 +1878,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "158",
+                      "$id": "164",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -1863,11 +1889,11 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "159",
+                        "$id": "165",
                         "BorderColor": {
-                          "$id": "160",
+                          "$id": "166",
                           "Formula": {
-                            "$id": "161",
+                            "$id": "167",
                             "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                           },
                           "StartColor": "#FF008000",
@@ -1902,11 +1928,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "162",
+                      "$id": "168",
                       "BackgroundColor": {
-                        "$id": "163",
+                        "$id": "169",
                         "Formula": {
-                          "$id": "164",
+                          "$id": "170",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF171717",
@@ -1922,7 +1948,7 @@
                     }
                   },
                   {
-                    "$id": "165",
+                    "$id": "171",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1951,7 +1977,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "166",
+                      "$id": "172",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1962,7 +1988,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "167"
+                        "$id": "173"
                       }
                     },
                     "Height": 23.0,
@@ -1985,11 +2011,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "168",
+                      "$id": "174",
                       "BackgroundColor": {
-                        "$id": "169",
+                        "$id": "175",
                         "Formula": {
-                          "$id": "170",
+                          "$id": "176",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2003,9 +2029,9 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "171",
+                        "$id": "177",
                         "Formula": {
-                          "$id": "172",
+                          "$id": "178",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)"
                         },
                         "StartColor": "#FF008000",
@@ -2021,7 +2047,7 @@
                     }
                   },
                   {
-                    "$id": "173",
+                    "$id": "179",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2050,7 +2076,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "174",
+                      "$id": "180",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2061,7 +2087,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "175"
+                        "$id": "181"
                       }
                     },
                     "Height": 70.0,
@@ -2084,21 +2110,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "176",
+                      "$id": "182",
                       "Text": {
-                        "$id": "177",
+                        "$id": "183",
                         "FormatString": "0.0",
                         "Formula": {
-                          "$id": "178",
+                          "$id": "184",
                           "Expression": "[DataCorePlugin.Computed.Fuel_RemainingLaps]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "179",
+                        "$id": "185",
                         "Formula": {
-                          "$id": "180",
+                          "$id": "186",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_RemainingLaps]<2,1,0)\r\n"
                         },
                         "StartColor": "#FF32CD32",
@@ -2134,11 +2160,11 @@
               "Name": "Fuel Laps",
               "Sid": 24,
               "Bindings": {
-                "$id": "181"
+                "$id": "187"
               }
             },
             {
-              "$id": "182",
+              "$id": "188",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -2149,7 +2175,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "183",
+                "$id": "189",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -2160,17 +2186,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "184"
+                  "$id": "190"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "185",
+                "$id": "191",
                 "$values": [
                   {
-                    "$id": "186",
+                    "$id": "192",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -2180,7 +2206,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "187",
+                      "$id": "193",
                       "BorderColor": "#FF008000",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -2191,11 +2217,11 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "188",
+                        "$id": "194",
                         "BorderColor": {
-                          "$id": "189",
+                          "$id": "195",
                           "Formula": {
-                            "$id": "190",
+                            "$id": "196",
                             "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                           },
                           "StartColor": "#FF008000",
@@ -2230,11 +2256,11 @@
                     "RenderingSkip": 0,
                     "Sid": 25,
                     "Bindings": {
-                      "$id": "191",
+                      "$id": "197",
                       "BackgroundColor": {
-                        "$id": "192",
+                        "$id": "198",
                         "Formula": {
-                          "$id": "193",
+                          "$id": "199",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2250,7 +2276,7 @@
                     }
                   },
                   {
-                    "$id": "194",
+                    "$id": "200",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2279,7 +2305,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "195",
+                      "$id": "201",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2290,7 +2316,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "196"
+                        "$id": "202"
                       }
                     },
                     "Height": 23.0,
@@ -2313,11 +2339,11 @@
                     "RenderingSkip": 0,
                     "Sid": 26,
                     "Bindings": {
-                      "$id": "197",
+                      "$id": "203",
                       "BackgroundColor": {
-                        "$id": "198",
+                        "$id": "204",
                         "Formula": {
-                          "$id": "199",
+                          "$id": "205",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF171717",
@@ -2331,9 +2357,9 @@
                         "TargetPropertyName": "BackgroundColor"
                       },
                       "TextColor": {
-                        "$id": "200",
+                        "$id": "206",
                         "Formula": {
-                          "$id": "201",
+                          "$id": "207",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF008000",
@@ -2349,7 +2375,7 @@
                     }
                   },
                   {
-                    "$id": "202",
+                    "$id": "208",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -2378,7 +2404,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "203",
+                      "$id": "209",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -2389,7 +2415,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "204"
+                        "$id": "210"
                       }
                     },
                     "Height": 70.0,
@@ -2412,21 +2438,21 @@
                     "RenderingSkip": 0,
                     "Sid": 27,
                     "Bindings": {
-                      "$id": "205",
+                      "$id": "211",
                       "Text": {
-                        "$id": "206",
+                        "$id": "212",
                         "FormatString": "0.00",
                         "Formula": {
-                          "$id": "207",
+                          "$id": "213",
                           "Expression": "if(isnull([DataCorePlugin.Computed.Fuel_LastLapConsumption],'')=0,'-',[DataCorePlugin.Computed.Fuel_LastLapConsumption])"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "208",
+                        "$id": "214",
                         "Formula": {
-                          "$id": "209",
+                          "$id": "215",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>\r\n\r\n[DataCorePlugin.Computed.Fuel_LitersPerLap]+([DataCorePlugin.Computed.Fuel_LitersPerLap]/100*5),1,0)"
                         },
                         "StartColor": "#FF32CD32",
@@ -2440,9 +2466,9 @@
                         "TargetPropertyName": "TextColor"
                       },
                       "FontSize": {
-                        "$id": "210",
+                        "$id": "216",
                         "Formula": {
-                          "$id": "211",
+                          "$id": "217",
                           "Expression": "if([DataCorePlugin.Computed.Fuel_LastLapConsumption]>9.9,45,50)"
                         },
                         "Mode": 2,
@@ -2471,7 +2497,620 @@
               "Name": "Fuel Used Last Lap",
               "Sid": 24,
               "Bindings": {
-                "$id": "212"
+                "$id": "218"
+              }
+            },
+            {
+              "$id": "219",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Repetitions": 0.0,
+              "RepeatLeftOffset": 0.0,
+              "RepeatTopOffset": 30.0,
+              "Height": 100.0,
+              "Width": 185.0,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "Rotation": 0.0,
+              "BorderStyle": {
+                "$id": "220",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "221"
+                }
+              },
+              "RenderingSkip": 0,
+              "ShowSelection": false,
+              "CanResize": false,
+              "Childrens": {
+                "$id": "222",
+                "$values": [
+                  {
+                    "$id": "223",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+                    "IsRectangleItem": true,
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "224",
+                      "BorderColor": "#FFF08080",
+                      "BorderTop": 4,
+                      "BorderBottom": 4,
+                      "BorderLeft": 4,
+                      "BorderRight": 4,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "225"
+                      }
+                    },
+                    "Height": 95.0,
+                    "Left": 90.0,
+                    "Opacity": 100.0,
+                    "Top": 5.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 185.0,
+                    "BorderBottom": 4,
+                    "BorderColor": "#FFF08080",
+                    "BorderLeft": 4,
+                    "BorderRight": 4,
+                    "BorderTop": 4,
+                    "Id": "814dba01-97c0-46b0-9a01-4e5cdb3c9ccc",
+                    "IsFreezed": false,
+                    "IsSelected": true,
+                    "Name": "Background",
+                    "RenderingSkip": 0,
+                    "Sid": 1,
+                    "Bindings": {
+                      "$id": "226"
+                    }
+                  },
+                  {
+                    "$id": "227",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "B612",
+                    "FontWeight": "Normal",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 18.0,
+                    "Text": "Charge",
+                    "TextColor": "#FFF08080",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "0000000000",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "228",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "229"
+                      }
+                    },
+                    "Height": 25.0,
+                    "Left": 140.0,
+                    "Opacity": 100.0,
+                    "Top": 0.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 80.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "71d87777-4ef4-4c99-bd29-a17b09b118ef",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Title",
+                    "RenderingSkip": 0,
+                    "Sid": 2,
+                    "Bindings": {
+                      "$id": "230"
+                    }
+                  },
+                  {
+                    "$id": "231",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "Prezident",
+                    "FontWeight": "Normal",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 60.0,
+                    "Text": "86.72",
+                    "TextColor": "#FFFAB8B8",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "0000000000",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#00FFFFFF",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "232",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "233"
+                      }
+                    },
+                    "Height": 75.0,
+                    "Left": 95.0,
+                    "Opacity": 100.0,
+                    "Top": 15.0,
+                    "Visible": false,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 175.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Charge",
+                    "RenderingSkip": 0,
+                    "Sid": 3,
+                    "Bindings": {
+                      "$id": "234",
+                      "Text": {
+                        "$id": "235",
+                        "FormatString": "0.00",
+                        "Formula": {
+                          "$id": "236",
+                          "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Text"
+                      }
+                    }
+                  },
+                  {
+                    "$id": "237",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.LinearGaugeItem, SimHub.Plugins",
+                    "IsLinearGauge": true,
+                    "GaugeAlignment": 0,
+                    "AutoSize": false,
+                    "AutoSizeScale": 1.0,
+                    "GaugeImage": "None",
+                    "GaugeColor": "#FFF5B5B5",
+                    "Minimum": 0.0,
+                    "Maximum": 100.0,
+                    "Value": 60.0,
+                    "Steps": 0.0,
+                    "PAW": 106.0,
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "238",
+                      "BorderColor": "#FF000000",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "239"
+                      }
+                    },
+                    "Height": 59.0,
+                    "Left": 94.0,
+                    "Opacity": 100.0,
+                    "Top": 28.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 177.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FF000000",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "c42724c7-a24b-4702-8fbe-2f22912f1362",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Charge Bar",
+                    "RenderingSkip": 0,
+                    "Sid": 0,
+                    "Bindings": {
+                      "$id": "240",
+                      "Value": {
+                        "$id": "241",
+                        "Formula": {
+                          "$id": "242",
+                          "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.EnergyERSBatteryPct],0) * 100"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Value"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Group": false,
+              "UseRotation": false,
+              "EnableBlur": false,
+              "Left": 90.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "14afbc68-ad07-4d5c-bc6d-7e7e52b3c839",
+              "IsSelected": false,
+              "Name": "Battery",
+              "Sid": 0,
+              "Bindings": {
+                "$id": "243",
+                "Visible": {
+                  "$id": "244",
+                  "Formula": {
+                    "$id": "245",
+                    "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Mercedes W12')"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "246",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Repetitions": 0.0,
+              "RepeatLeftOffset": 0.0,
+              "RepeatTopOffset": 30.0,
+              "Height": 100.0,
+              "Width": 85.0,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "Rotation": 0.0,
+              "BorderStyle": {
+                "$id": "247",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "248"
+                }
+              },
+              "RenderingSkip": 0,
+              "ShowSelection": false,
+              "CanResize": false,
+              "Childrens": {
+                "$id": "249",
+                "$values": [
+                  {
+                    "$id": "250",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+                    "IsRectangleItem": true,
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "251",
+                      "BorderColor": "#FFFFA500",
+                      "BorderTop": 3,
+                      "BorderBottom": 3,
+                      "BorderLeft": 3,
+                      "BorderRight": 3,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "252"
+                      }
+                    },
+                    "Height": 95.0,
+                    "Left": 0.0,
+                    "Opacity": 100.0,
+                    "Top": 5.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 85.0,
+                    "BorderBottom": 3,
+                    "BorderColor": "#FFFFA500",
+                    "BorderLeft": 3,
+                    "BorderRight": 3,
+                    "BorderTop": 3,
+                    "Id": "814dba01-97c0-46b0-9a01-4e5cdb3c9ccc",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Background",
+                    "RenderingSkip": 0,
+                    "Sid": 5,
+                    "Bindings": {
+                      "$id": "253",
+                      "BackgroundColor": {
+                        "$id": "254",
+                        "Formula": {
+                          "$id": "255",
+                          "Expression": "isnull([DataCorePlugin.GameData.NewData.ABSActive],0)"
+                        },
+                        "StartColor": "#FF171717",
+                        "EnableMiddleColor": false,
+                        "MiddleColor": "#FF000000",
+                        "MiddleColorValue": 1.0,
+                        "EndColor": "#FFFFA500",
+                        "StartColorValue": 0.0,
+                        "EndColorValue": 1.0,
+                        "Mode": 4,
+                        "TargetPropertyName": "BackgroundColor"
+                      }
+                    }
+                  },
+                  {
+                    "$id": "256",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "B612",
+                    "FontWeight": "Normal",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 18.0,
+                    "Text": "Mode",
+                    "TextColor": "#FFFFA500",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#FF171717",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "257",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "258"
+                      }
+                    },
+                    "Height": 25.0,
+                    "Left": 18.0,
+                    "Opacity": 100.0,
+                    "Top": 0.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 55.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "71d87777-4ef4-4c99-bd29-a17b09b118ef",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "Title",
+                    "RenderingSkip": 0,
+                    "Sid": 6,
+                    "Bindings": {
+                      "$id": "259",
+                      "BackgroundColor": {
+                        "$id": "260",
+                        "Formula": {
+                          "$id": "261",
+                          "Expression": "isnull([DataCorePlugin.GameData.NewData.ABSActive],0)"
+                        },
+                        "StartColor": "#FF171717",
+                        "EnableMiddleColor": false,
+                        "MiddleColor": "#FF000000",
+                        "MiddleColorValue": 1.0,
+                        "EndColor": "#FFFFA500",
+                        "StartColorValue": 0.0,
+                        "EndColorValue": 1.0,
+                        "Mode": 4,
+                        "TargetPropertyName": "BackgroundColor"
+                      }
+                    }
+                  },
+                  {
+                    "$id": "262",
+                    "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                    "IsTextItem": true,
+                    "ShadowDepth": 0,
+                    "ShadowBlur": 0,
+                    "ShadowDirection": 315,
+                    "ShadowColor": "#FF808080",
+                    "Font": "Prezident",
+                    "FontWeight": "Normal",
+                    "TextWrapping": 1,
+                    "FontStyle": "Normal",
+                    "FontSize": 60.0,
+                    "Text": "1",
+                    "TextColor": "#FFF0E68C",
+                    "HorizontalAlignment": 1,
+                    "VerticalAlignment": 1,
+                    "UseMonospacedText": false,
+                    "CharWidth": 40.0,
+                    "SpecialCharsWidth": 20.0,
+                    "SpecialChars": ".,:;",
+                    "TextMask": "",
+                    "TextMaskColor": "#FF808080",
+                    "Rotation": 0.0,
+                    "UseRotation": false,
+                    "CanResize": true,
+                    "BackgroundColor": "#00FFFFFF",
+                    "BlurRadius": 0.0,
+                    "EnableBlur": false,
+                    "BorderStyle": {
+                      "$id": "263",
+                      "BorderColor": "#FFFFFFFF",
+                      "BorderTop": 0,
+                      "BorderBottom": 0,
+                      "BorderLeft": 0,
+                      "BorderRight": 0,
+                      "RadiusTopLeft": 0,
+                      "RadiusTopRight": 0,
+                      "RadiusBottomLeft": 0,
+                      "RadiusBottomRight": 0,
+                      "Bindings": {
+                        "$id": "264"
+                      }
+                    },
+                    "Height": 80.0,
+                    "Left": 5.0,
+                    "Opacity": 100.0,
+                    "Top": 18.0,
+                    "Visible": true,
+                    "BlinkDelay": 250.0,
+                    "BlinkEnabled": false,
+                    "Width": 75.0,
+                    "BorderBottom": 0,
+                    "BorderColor": "#FFFFFFFF",
+                    "BorderLeft": 0,
+                    "BorderRight": 0,
+                    "BorderTop": 0,
+                    "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
+                    "IsFreezed": false,
+                    "IsSelected": false,
+                    "Name": "MGU-K Mode",
+                    "RenderingSkip": 0,
+                    "Sid": 7,
+                    "Bindings": {
+                      "$id": "265",
+                      "Text": {
+                        "$id": "266",
+                        "FormatString": "0",
+                        "Formula": {
+                          "$id": "267",
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcMGUKDeployMode]"
+                        },
+                        "Mode": 2,
+                        "TargetPropertyName": "Text"
+                      }
+                    }
+                  }
+                ]
+              },
+              "Group": false,
+              "UseRotation": false,
+              "EnableBlur": false,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
+              "IsSelected": false,
+              "Name": "Mode",
+              "Sid": 4,
+              "Bindings": {
+                "$id": "268",
+                "Visible": {
+                  "$id": "269",
+                  "Formula": {
+                    "$id": "270",
+                    "Expression": "in(if(isnull([DataCorePlugin.GameData.NewData.CarModel]),'Null',[DataCorePlugin.GameData.NewData.CarModel]),'Mercedes W12')"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
               }
             }
           ]
@@ -2480,7 +3119,7 @@
         "Name": "Speed and Fuel",
         "Sid": 0,
         "Bindings": {
-          "$id": "213"
+          "$id": "271"
         }
       }
     ]
@@ -2493,10 +3132,10 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "214",
+    "$id": "272",
     "$values": [
       {
-        "$id": "215",
+        "$id": "273",
         "Name": "RPM Bar multicoloured",
         "Extension": ".png",
         "Optimized": true,
@@ -2505,16 +3144,16 @@
     ]
   },
   "Metadata": {
-    "$id": "216",
+    "$id": "274",
     "ScreenCount": 1.0,
     "InGameScreensIndexs": {
-      "$id": "217",
+      "$id": "275",
       "$values": [
         0
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "218",
+      "$id": "276",
       "$values": []
     },
     "MainPreviewIndex": 0,
@@ -2526,7 +3165,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "219",
+      "$id": "277",
       "$values": []
     }
   },
