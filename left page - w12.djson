@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "4d85f958-7e47-4e58-934d-5126eef0755a",
+  "Id": "8df6be03-cef3-4419-9cb3-d01b5f4f59fa",
   "BaseHeight": 195,
   "BaseWidth": 275,
   "BackgroundColor": "#FF000000",
@@ -240,7 +240,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "23",
-                          "Expression": "replace(isnull([DataCorePlugin.GameRawData.SessionData.CarSetup.VehicleSystems.EngineInCarDials.ThrottleShaping],'0'),' (PEDAL)','')"
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcDiffEntry]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -264,7 +264,7 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "Diff Entry",
               "Sid": 20,
               "Bindings": {
@@ -736,7 +736,7 @@
                         "FormatString": "0",
                         "Formula": {
                           "$id": "61",
-                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcDiffEntry]"
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcDiffExit]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
@@ -821,23 +821,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "69",
-                        "BorderColor": {
-                          "$id": "70",
-                          "Formula": {
-                            "$id": "71",
-                            "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-                          },
-                          "StartColor": "#FF1E90FF",
-                          "EnableMiddleColor": false,
-                          "MiddleColor": "#FF000000",
-                          "MiddleColorValue": 1.0,
-                          "EndColor": "#FFFFFFFF",
-                          "StartColorValue": 0.0,
-                          "EndColorValue": 1.0,
-                          "Mode": 4,
-                          "TargetPropertyName": "BorderColor"
-                        }
+                        "$id": "69"
                       }
                     },
                     "Height": 90.0,
@@ -860,27 +844,11 @@
                     "RenderingSkip": 0,
                     "Sid": 21,
                     "Bindings": {
-                      "$id": "72",
-                      "BackgroundColor": {
-                        "$id": "73",
-                        "Formula": {
-                          "$id": "74",
-                          "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)!=0,[DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)"
-                        },
-                        "StartColor": "#FF171717",
-                        "EnableMiddleColor": true,
-                        "MiddleColor": "#FF32CD32",
-                        "MiddleColorValue": 2.0,
-                        "EndColor": "#FF1E90FF",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 3.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "BackgroundColor"
-                      }
+                      "$id": "70"
                     }
                   },
                   {
-                    "$id": "75",
+                    "$id": "71",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -892,7 +860,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 18.0,
-                    "Text": "DRS",
+                    "Text": "BMig",
                     "TextColor": "#FF1E90FF",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -909,7 +877,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "76",
+                      "$id": "72",
                       "BorderColor": "#FF008080",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -920,7 +888,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "77"
+                        "$id": "73"
                       }
                     },
                     "Height": 25.0,
@@ -938,48 +906,16 @@
                     "BorderTop": 0,
                     "Id": "71d87777-4ef4-4c99-bd29-a17b09b118ef",
                     "IsFreezed": false,
-                    "IsSelected": false,
+                    "IsSelected": true,
                     "Name": "Title",
                     "RenderingSkip": 0,
                     "Sid": 22,
                     "Bindings": {
-                      "$id": "78",
-                      "BackgroundColor": {
-                        "$id": "79",
-                        "Formula": {
-                          "$id": "80",
-                          "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-                        },
-                        "StartColor": "#FF171717",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FF1E90FF",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "BackgroundColor"
-                      },
-                      "TextColor": {
-                        "$id": "81",
-                        "Formula": {
-                          "$id": "82",
-                          "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-                        },
-                        "StartColor": "#FF1E90FF",
-                        "EnableMiddleColor": false,
-                        "MiddleColor": "#FF000000",
-                        "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFFFFFF",
-                        "StartColorValue": 0.0,
-                        "EndColorValue": 1.0,
-                        "Mode": 4,
-                        "TargetPropertyName": "TextColor"
-                      }
+                      "$id": "74"
                     }
                   },
                   {
-                    "$id": "83",
+                    "$id": "75",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -991,7 +927,7 @@
                     "TextWrapping": 1,
                     "FontStyle": "Normal",
                     "FontSize": 60.0,
-                    "Text": "0",
+                    "Text": "1",
                     "TextColor": "#FFFFFFFF",
                     "HorizontalAlignment": 1,
                     "VerticalAlignment": 1,
@@ -1008,7 +944,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "84",
+                      "$id": "76",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1019,7 +955,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "85"
+                        "$id": "77"
                       }
                     },
                     "Height": 80.0,
@@ -1038,34 +974,34 @@
                     "Id": "27fbc36d-266d-4a65-b129-cca673bed59d",
                     "IsFreezed": false,
                     "IsSelected": false,
-                    "Name": "DRS Mode",
+                    "Name": "Brake Migration",
                     "RenderingSkip": 0,
                     "Sid": 23,
                     "Bindings": {
-                      "$id": "86",
+                      "$id": "78",
                       "Text": {
-                        "$id": "87",
+                        "$id": "79",
                         "FormatString": "0",
                         "Formula": {
-                          "$id": "88",
-                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.DRS_Status]"
+                          "$id": "80",
+                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.dcPeakBrakeBias]"
                         },
                         "Mode": 2,
                         "TargetPropertyName": "Text"
                       },
                       "TextColor": {
-                        "$id": "89",
+                        "$id": "81",
                         "Formula": {
-                          "$id": "90",
-                          "Expression": "[DataCorePlugin.GameRawData.Telemetry.DRS_Status]"
+                          "$id": "82",
+                          "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)!=0,[DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)"
                         },
                         "StartColor": "#FFAFEEEE",
                         "EnableMiddleColor": true,
-                        "MiddleColor": "#FFE0FFFF",
+                        "MiddleColor": "#FFF5F5F5",
                         "MiddleColorValue": 1.0,
-                        "EndColor": "#FFFFFFFF",
+                        "EndColor": "#FF00FF00",
                         "StartColorValue": 0.0,
-                        "EndColorValue": 2.0,
+                        "EndColorValue": 3.0,
                         "Mode": 4,
                         "TargetPropertyName": "TextColor"
                       }
@@ -1088,15 +1024,15 @@
               "BorderRight": 0,
               "BorderTop": 0,
               "Id": "a905ff21-ac2c-48d2-adf8-ef98a5a86c6c",
-              "IsSelected": true,
-              "Name": "DRS",
+              "IsSelected": false,
+              "Name": "Brake Migration",
               "Sid": 20,
               "Bindings": {
-                "$id": "91"
+                "$id": "83"
               }
             },
             {
-              "$id": "92",
+              "$id": "84",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
               "Repetitions": 0.0,
               "RepeatLeftOffset": 0.0,
@@ -1107,7 +1043,7 @@
               "BlurRadius": 0.0,
               "Rotation": 0.0,
               "BorderStyle": {
-                "$id": "93",
+                "$id": "85",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -1118,17 +1054,17 @@
                 "RadiusBottomLeft": 0,
                 "RadiusBottomRight": 0,
                 "Bindings": {
-                  "$id": "94"
+                  "$id": "86"
                 }
               },
               "RenderingSkip": 0,
               "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
-                "$id": "95",
+                "$id": "87",
                 "$values": [
                   {
-                    "$id": "96",
+                    "$id": "88",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
                     "IsRectangleItem": true,
                     "Rotation": 0.0,
@@ -1138,7 +1074,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "97",
+                      "$id": "89",
                       "BorderColor": "#FFDA70D6",
                       "BorderTop": 4,
                       "BorderBottom": 4,
@@ -1149,7 +1085,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "98"
+                        "$id": "90"
                       }
                     },
                     "Height": 90.0,
@@ -1172,11 +1108,11 @@
                     "RenderingSkip": 0,
                     "Sid": 13,
                     "Bindings": {
-                      "$id": "99"
+                      "$id": "91"
                     }
                   },
                   {
-                    "$id": "100",
+                    "$id": "92",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1205,7 +1141,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "101",
+                      "$id": "93",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1216,7 +1152,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "102"
+                        "$id": "94"
                       }
                     },
                     "Height": 25.0,
@@ -1239,11 +1175,11 @@
                     "RenderingSkip": 0,
                     "Sid": 14,
                     "Bindings": {
-                      "$id": "103"
+                      "$id": "95"
                     }
                   },
                   {
-                    "$id": "104",
+                    "$id": "96",
                     "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
                     "IsTextItem": true,
                     "ShadowDepth": 0,
@@ -1272,7 +1208,7 @@
                     "BlurRadius": 0.0,
                     "EnableBlur": false,
                     "BorderStyle": {
-                      "$id": "105",
+                      "$id": "97",
                       "BorderColor": "#FFFFFFFF",
                       "BorderTop": 0,
                       "BorderBottom": 0,
@@ -1283,7 +1219,7 @@
                       "RadiusBottomLeft": 0,
                       "RadiusBottomRight": 0,
                       "Bindings": {
-                        "$id": "106"
+                        "$id": "98"
                       }
                     },
                     "Height": 80.0,
@@ -1306,12 +1242,12 @@
                     "RenderingSkip": 0,
                     "Sid": 15,
                     "Bindings": {
-                      "$id": "107",
+                      "$id": "99",
                       "Text": {
-                        "$id": "108",
+                        "$id": "100",
                         "FormatString": "0.0",
                         "Formula": {
-                          "$id": "109",
+                          "$id": "101",
                           "Expression": "[DataCorePlugin.GameData.NewData.BrakeBias]\r\n"
                         },
                         "Mode": 2,
@@ -1340,7 +1276,7 @@
               "Name": "Brake Bias",
               "Sid": 12,
               "Bindings": {
-                "$id": "110"
+                "$id": "102"
               }
             }
           ]
@@ -1349,7 +1285,7 @@
         "Name": "Left Page - FR35",
         "Sid": 0,
         "Bindings": {
-          "$id": "111"
+          "$id": "103"
         }
       }
     ]
@@ -1362,20 +1298,20 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "112",
+    "$id": "104",
     "$values": []
   },
   "Metadata": {
-    "$id": "113",
+    "$id": "105",
     "ScreenCount": 1.0,
     "InGameScreensIndexs": {
-      "$id": "114",
+      "$id": "106",
       "$values": [
         0
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "115",
+      "$id": "107",
       "$values": []
     },
     "MainPreviewIndex": 0,
@@ -1387,7 +1323,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "116",
+      "$id": "108",
       "$values": []
     }
   },
