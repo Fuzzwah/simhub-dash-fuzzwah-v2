@@ -1,1 +1,398 @@
-{"Variables":{"DashboardVariables":[]},"DashboardDebugManager":{},"Version":2,"Id":"ae93e6cf-a051-4941-8246-5e7d2ca1781f","BaseHeight":200,"BaseWidth":800,"BackgroundColor":"#FF000000","Screens":[{"RenderingSkip":0,"Name":"Screen1","InGameScreen":true,"IdleScreen":false,"PitScreen":false,"ScreenId":"068eb0c6-8824-49ef-b22e-1ecfa562d801","AllowOverlays":true,"IsForegroundLayer":false,"IsOverlayLayer":false,"OverlayTriggerExpression":{"Expression":""},"ScreenEnabledExpression":{"Expression":""},"OverlayMaxDuration":0,"OverlayMinDuration":0,"IsBackgroundLayer":false,"BackgroundColor":"#00FFFFFF","Background":"None","Items":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.LinearGaugeItem, SimHub.Plugins","IsLinearGauge":true,"GaugeOrientation":0,"GaugeAlignment":0,"AutoSize":false,"GaugeImage":"RPM Bar multicoloured","GaugeColor":"#FF246FB7","AlternateGaugeColor":"#FF008000","UseAlternateStyle":false,"Minimum":0.0,"Maximum":30.0,"Value":20.0,"Steps":0.0,"PAW":533.0,"BackgroundColor":"#00FFFFFF","BorderStyle":{"BorderColor":"#FF000000","BorderTop":1,"BorderBottom":1,"BorderLeft":1,"BorderRight":1},"Height":50.0,"Left":0.0,"Top":150.0,"Visible":true,"Width":800.0,"Name":"Bar","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Value":{"Formula":{"Expression":"isnull([SerialDashPlugin.ComputedRPMPercent]-70,0)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FFFFD700","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":0.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Yellow 1","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM],1,0)"},"StartColor":"#00FFFFFF","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FFFFD700","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FFFFFF00","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":100.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Yellow 2","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + (([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7),1,0)"},"StartColor":"#00FFFFFF","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FFFFFF00","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FFDC143C","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":200.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Red 1","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 2),1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FFDC143C","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FFFF0000","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":300.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Red 2","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 3),1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FFFF0000","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FF00008B","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":400.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Blue 1","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 4),1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FF0000FF","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FF0000FF","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":500.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Blue 2","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 5),1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FF0000FF","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FF800080","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":600.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Purple 1","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 6),1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FF800080","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins","IsRectangleItem":true,"BackgroundColor":"#FFFF00FF","BorderStyle":{"BorderTop":2,"BorderBottom":2,"BorderLeft":2,"BorderRight":2},"Height":150.0,"Left":700.0,"Top":0.0,"Visible":true,"Width":100.0,"Name":"Purple 2","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"BackgroundColor":{"Formula":{"Expression":"if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM],1,0)"},"StartColor":"#FF000000","EnableMiddleColor":false,"MiddleColor":"#FF000000","MiddleColorValue":1.0,"EndColor":"#FFFF00FF","StartColorValue":0.0,"EndColorValue":1.0,"Mode":4}}}],"MinimumRefreshIntervalMS":0.0}],"SnapToGrid":false,"HideLabels":false,"ShowForeground":true,"ForegroundOpacity":100.0,"ShowBackground":true,"BackgroundOpacity":100.0,"ShowBoundingRectangles":false,"GridSize":10,"Images":[{"Name":"RPM Bar multicoloured","Extension":".png","Modified":false,"Optimized":true,"Width":1055,"Height":133,"Length":40115,"MD5":"166cc1a769a01129c316b325ebc69d08"}],"Metadata":{"SimHubVersion":"9.1.16","ScreenCount":1.0,"InGameScreensIndexs":[0],"IdleScreensIndexs":[],"MainPreviewIndex":0,"IsOverlay":false,"Width":800.0,"Height":200.0,"OverlaySizeWarning":false,"MetadataVersion":2.0,"EnableOnDashboardMessaging":true,"PitScreensIndexs":[]},"ShowOnScreenControls":true,"IsOverlay":false,"EnableClickThroughOverlay":true,"EnableOnDashboardMessaging":true}
+{
+	"Variables": {
+		"DashboardVariables": [
+
+		]
+	},
+	"DashboardDebugManager": {
+
+	},
+	"Version": 2,
+	"Id": "ae93e6cf-a051-4941-8246-5e7d2ca1781f",
+	"BaseHeight": 200,
+	"BaseWidth": 800,
+	"BackgroundColor": "#FF000000",
+	"Screens": [
+		{
+			"RenderingSkip": 0,
+			"Name": "Screen1",
+			"InGameScreen": true,
+			"IdleScreen": false,
+			"PitScreen": false,
+			"ScreenId": "068eb0c6-8824-49ef-b22e-1ecfa562d801",
+			"AllowOverlays": true,
+			"IsForegroundLayer": false,
+			"IsOverlayLayer": false,
+			"OverlayTriggerExpression": {
+				"Expression": ""
+			},
+			"ScreenEnabledExpression": {
+				"Expression": ""
+			},
+			"OverlayMaxDuration": 0,
+			"OverlayMinDuration": 0,
+			"IsBackgroundLayer": false,
+			"BackgroundColor": "#00FFFFFF",
+			"Background": "None",
+			"Items": [
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.LinearGaugeItem, SimHub.Plugins",
+					"IsLinearGauge": true,
+					"GaugeOrientation": 0,
+					"GaugeAlignment": 0,
+					"AutoSize": false,
+					"GaugeImage": "RPM Bar multicoloured",
+					"GaugeColor": "#FF246FB7",
+					"AlternateGaugeColor": "#FF008000",
+					"UseAlternateStyle": false,
+					"Minimum": 0.0,
+					"Maximum": 30.0,
+					"Value": 20.0,
+					"Steps": 0.0,
+					"PAW": 533.0,
+					"BackgroundColor": "#00FFFFFF",
+					"BorderStyle": {
+						"BorderColor": "#FF000000",
+						"BorderTop": 1,
+						"BorderBottom": 1,
+						"BorderLeft": 1,
+						"BorderRight": 1
+					},
+					"Height": 50.0,
+					"Left": 0.0,
+					"Top": 150.0,
+					"Visible": true,
+					"Width": 800.0,
+					"Name": "Bar",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"Value": {
+							"Formula": {
+								"Expression": "isnull([SerialDashPlugin.ComputedRPMPercent]-70,0)"
+							},
+							"Mode": 2
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FFFFD700",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 0.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Yellow 1",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM],1,0)"
+							},
+							"StartColor": "#00FFFFFF",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FFFFD700",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FFFFFF00",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 100.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Yellow 2",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + (([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7),1,0)"
+							},
+							"StartColor": "#00FFFFFF",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FFFFFF00",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FFDC143C",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 200.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Red 1",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 2),1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FFDC143C",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FFFF0000",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 300.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Red 2",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 3),1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FFFF0000",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FF00008B",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 400.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Blue 1",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 4),1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FF0000FF",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FF0000FF",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 500.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Blue 2",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 5),1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FF0000FF",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FF800080",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 600.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Purple 1",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM] + ((([DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM] - [DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLFirstRPM]) / 7) * 6),1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FF800080",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				},
+				{
+					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+					"IsRectangleItem": true,
+					"BackgroundColor": "#FFFF00FF",
+					"BorderStyle": {
+						"BorderTop": 2,
+						"BorderBottom": 2,
+						"BorderLeft": 2,
+						"BorderRight": 2
+					},
+					"Height": 150.0,
+					"Left": 700.0,
+					"Top": 0.0,
+					"Visible": true,
+					"Width": 100.0,
+					"Name": "Purple 2",
+					"RenderingSkip": 0,
+					"MinimumRefreshIntervalMS": 0.0,
+					"Bindings": {
+						"BackgroundColor": {
+							"Formula": {
+								"Expression": "if([DataCorePlugin.GameData.Rpms]>[DataCorePlugin.GameRawData.SessionData.DriverInfo.DriverCarSLBlinkRPM],1,0)"
+							},
+							"StartColor": "#FF000000",
+							"EnableMiddleColor": false,
+							"MiddleColor": "#FF000000",
+							"MiddleColorValue": 1.0,
+							"EndColor": "#FFFF00FF",
+							"StartColorValue": 0.0,
+							"EndColorValue": 1.0,
+							"Mode": 4
+						}
+					}
+				}
+			],
+			"MinimumRefreshIntervalMS": 0.0
+		}
+	],
+	"SnapToGrid": false,
+	"HideLabels": false,
+	"ShowForeground": true,
+	"ForegroundOpacity": 100.0,
+	"ShowBackground": true,
+	"BackgroundOpacity": 100.0,
+	"ShowBoundingRectangles": false,
+	"GridSize": 10,
+	"Images": [
+		{
+			"Name": "RPM Bar multicoloured",
+			"Extension": ".png",
+			"Modified": false,
+			"Optimized": true,
+			"Width": 1055,
+			"Height": 133,
+			"Length": 40115,
+			"MD5": "166cc1a769a01129c316b325ebc69d08"
+		}
+	],
+	"Metadata": {
+		"SimHubVersion": "9.1.16",
+		"ScreenCount": 1.0,
+		"InGameScreensIndexs": [
+			0
+		],
+		"IdleScreensIndexs": [
+
+		],
+		"MainPreviewIndex": 0,
+		"IsOverlay": false,
+		"Width": 800.0,
+		"Height": 200.0,
+		"OverlaySizeWarning": false,
+		"MetadataVersion": 2.0,
+		"EnableOnDashboardMessaging": true,
+		"PitScreensIndexs": [
+
+		]
+	},
+	"ShowOnScreenControls": true,
+	"IsOverlay": false,
+	"EnableClickThroughOverlay": true,
+	"EnableOnDashboardMessaging": true
+}
