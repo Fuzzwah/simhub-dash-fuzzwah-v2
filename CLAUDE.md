@@ -8,7 +8,7 @@ SimHub Dash Studio docs: https://github.com/SHWotever/SimHub/wiki/Dash-Studio
 
 ## Architecture
 
-The dashboard is a **composite layout** at 800x600 resolution. The main file `Fuzzwah v2.djson` acts as the shell that embeds other `.djson` files as widgets:
+The dashboard is a **composite layout** at 960x600 resolution. The main file `Fuzzwah v2.djson` acts as the shell that embeds other `.djson` files as widgets:
 
 - **Main shell** (`Fuzzwah v2.djson`) — has Idle and Dashboard screens, embeds all other components
 - **Left panels** (`Left Page - *.djson`) — car-specific info panels (ABS, TC, ARB, etc.), swapped based on which car is being driven

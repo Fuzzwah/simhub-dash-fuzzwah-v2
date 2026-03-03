@@ -1,16 +1,12 @@
 {
 	"Variables": {
-		"DashboardVariables": [
-
-		]
+		"DashboardVariables": []
 	},
-	"DashboardDebugManager": {
-
-	},
+	"DashboardDebugManager": {},
 	"Version": 2,
 	"Id": "7f85125e-9fe5-402a-ade6-f337af3f6664",
 	"BaseHeight": 300,
-	"BaseWidth": 275,
+	"BaseWidth": 330,
 	"BackgroundColor": "#FF000000",
 	"Screens": [
 		{
@@ -37,9 +33,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 0.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -54,10 +50,10 @@
 								"BorderRight": 4
 							},
 							"Height": 95.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 5.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -74,10 +70,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 25.0,
-							"Left": 35.0,
+							"Left": 42,
 							"Top": 0.0,
 							"Visible": true,
-							"Width": 68.0,
+							"Width": 81.6,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -94,10 +90,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 80.0,
-							"Left": 5.0,
+							"Left": 6,
 							"Top": 15.0,
 							"Visible": true,
-							"Width": 125.0,
+							"Width": 150,
 							"Name": "Max Speed",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -131,9 +127,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 0.0,
-					"Left": 140.0,
+					"Left": 168,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -148,10 +144,10 @@
 								"BorderRight": 4
 							},
 							"Height": 95.0,
-							"Left": 140.0,
+							"Left": 168,
 							"Top": 5.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -168,10 +164,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 25.0,
-							"Left": 179.0,
+							"Left": 214.8,
 							"Top": 0.0,
 							"Visible": true,
-							"Width": 68.0,
+							"Width": 81.6,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -188,10 +184,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 80.0,
-							"Left": 145.0,
+							"Left": 174,
 							"Top": 15.0,
 							"Visible": true,
-							"Width": 125.0,
+							"Width": 150,
 							"Name": "Min Speed",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -225,17 +221,17 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": -4.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 204.0,
-					"Width": 275.0,
+					"Width": 330,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
 							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 							"Top": -4.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Height": 104.0,
-							"Width": 275.0,
+							"Width": 330,
 							"BackgroundColor": "#00FFFFFF",
 							"Childrens": [
 								{
@@ -250,10 +246,10 @@
 										"BorderRight": 4
 									},
 									"Height": 95.0,
-									"Left": 0.0,
+									"Left": 0,
 									"Top": 5.0,
 									"Visible": true,
-									"Width": 275.0,
+									"Width": 330,
 									"Name": "Background",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0
@@ -270,10 +266,10 @@
 									"TextMask": "0000000000",
 									"BackgroundColor": "#FF171717",
 									"Height": 25.0,
-									"Left": 97.5,
+									"Left": 117,
 									"Top": -4.0,
 									"Visible": true,
-									"Width": 80.0,
+									"Width": 96,
 									"Name": "Title",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0
@@ -290,10 +286,10 @@
 									"TextMask": "0000000000",
 									"BackgroundColor": "#00FFFFFF",
 									"Height": 75.0,
-									"Left": 5.0,
+									"Left": 6,
 									"Top": 15.0,
 									"Visible": false,
-									"Width": 265.0,
+									"Width": 318,
 									"Name": "Charge",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0,
@@ -328,10 +324,10 @@
 										"BorderColor": "#FF000000"
 									},
 									"Height": 70.0,
-									"Left": 5.0,
+									"Left": 6,
 									"Top": 20.0,
 									"Visible": true,
-									"Width": 265.0,
+									"Width": 318,
 									"Name": "Charge Bar",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0,
@@ -355,9 +351,9 @@
 						{
 							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 							"Top": 100.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Height": 100.0,
-							"Width": 275.0,
+							"Width": 330,
 							"BackgroundColor": "#00FFFFFF",
 							"Childrens": [
 								{
@@ -372,10 +368,10 @@
 										"BorderRight": 4
 									},
 									"Height": 95.0,
-									"Left": 0.0,
+									"Left": 0,
 									"Top": 105.0,
 									"Visible": true,
-									"Width": 275.0,
+									"Width": 330,
 									"Name": "Background",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0
@@ -392,10 +388,10 @@
 									"TextMask": "0000000000",
 									"BackgroundColor": "#FF171717",
 									"Height": 25.0,
-									"Left": 104.0,
+									"Left": 124.8,
 									"Top": 100.0,
 									"Visible": true,
-									"Width": 68.0,
+									"Width": 81.6,
 									"Name": "Title",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0
@@ -420,10 +416,10 @@
 										"BorderColor": "#FF000000"
 									},
 									"Height": 70.0,
-									"Left": 5.0,
+									"Left": 6,
 									"Top": 120.0,
 									"Visible": true,
-									"Width": 265.0,
+									"Width": 318,
 									"Name": "Deploy Bar",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0,
@@ -449,10 +445,10 @@
 									"TextMask": "0000000000",
 									"BackgroundColor": "#00FFFFFF",
 									"Height": 75.0,
-									"Left": 5.0,
+									"Left": 6,
 									"Top": 115.0,
 									"Visible": false,
-									"Width": 265.0,
+									"Width": 318,
 									"Name": "Deploy",
 									"RenderingSkip": 0,
 									"MinimumRefreshIntervalMS": 0.0,
@@ -493,9 +489,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 100.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -526,10 +522,10 @@
 								}
 							},
 							"Height": 95.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 105.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -562,10 +558,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 23.0,
-							"Left": 30.0,
+							"Left": 36,
 							"Top": 100.0,
 							"Visible": true,
-							"Width": 80.0,
+							"Width": 96,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -612,10 +608,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 70.0,
-							"Left": 2.0,
+							"Left": 2.4,
 							"Top": 125.0,
 							"Visible": true,
-							"Width": 130.0,
+							"Width": 156,
 							"Name": "Fuel Left",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -663,9 +659,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 100.0,
-					"Left": 139.0,
+					"Left": 166.8,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -680,10 +676,10 @@
 								"BorderRight": 4
 							},
 							"Height": 95.0,
-							"Left": 139.0,
+							"Left": 166.8,
 							"Top": 105.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -700,10 +696,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 23.0,
-							"Left": 152.0,
+							"Left": 182.4,
 							"Top": 100.0,
 							"Visible": true,
-							"Width": 110.0,
+							"Width": 132,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -720,10 +716,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 70.0,
-							"Left": 142.0,
+							"Left": 170.4,
 							"Top": 125.0,
 							"Visible": true,
-							"Width": 130.0,
+							"Width": 156,
 							"Name": "Laps Since Pit",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -764,9 +760,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 200.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -797,10 +793,10 @@
 								}
 							},
 							"Height": 95.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 205.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -833,10 +829,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 23.0,
-							"Left": 30.0,
+							"Left": 36,
 							"Top": 200.0,
 							"Visible": true,
-							"Width": 80.0,
+							"Width": 96,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -883,10 +879,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 70.0,
-							"Left": 2.0,
+							"Left": 2.4,
 							"Top": 225.0,
 							"Visible": true,
-							"Width": 130.0,
+							"Width": 156,
 							"Name": "Fuel Laps",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -925,9 +921,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 200.0,
-					"Left": 139.0,
+					"Left": 166.8,
 					"Height": 100.0,
-					"Width": 135.0,
+					"Width": 162,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -958,10 +954,10 @@
 								}
 							},
 							"Height": 95.0,
-							"Left": 139.0,
+							"Left": 166.8,
 							"Top": 205.0,
 							"Visible": true,
-							"Width": 135.0,
+							"Width": 162,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -994,10 +990,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 23.0,
-							"Left": 152.0,
+							"Left": 182.4,
 							"Top": 200.0,
 							"Visible": true,
-							"Width": 110.0,
+							"Width": 132,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1044,10 +1040,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 70.0,
-							"Left": 142.0,
+							"Left": 170.4,
 							"Top": 225.0,
 							"Visible": true,
-							"Width": 130.0,
+							"Width": 156,
 							"Name": "Fuel Level",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1093,9 +1089,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 0.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 100.0,
-					"Width": 85.0,
+					"Width": 102,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -1110,10 +1106,10 @@
 								"BorderRight": 3
 							},
 							"Height": 95.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 5.0,
 							"Visible": true,
-							"Width": 85.0,
+							"Width": 102,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1145,10 +1141,10 @@
 							"VerticalAlignment": 1,
 							"BackgroundColor": "#FF171717",
 							"Height": 25.0,
-							"Left": 18.0,
+							"Left": 21.6,
 							"Top": 0.0,
 							"Visible": true,
-							"Width": 55.0,
+							"Width": 66,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1180,10 +1176,10 @@
 							"VerticalAlignment": 1,
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 80.0,
-							"Left": 5.0,
+							"Left": 6,
 							"Top": 18.0,
 							"Visible": true,
-							"Width": 75.0,
+							"Width": 90,
 							"Name": "MGU-K Mode",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1217,9 +1213,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 0.0,
-					"Left": 90.0,
+					"Left": 108,
 					"Height": 100.0,
-					"Width": 185.0,
+					"Width": 222,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -1234,10 +1230,10 @@
 								"BorderRight": 4
 							},
 							"Height": 95.0,
-							"Left": 90.0,
+							"Left": 108,
 							"Top": 5.0,
 							"Visible": true,
-							"Width": 185.0,
+							"Width": 222,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -1254,10 +1250,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#FF171717",
 							"Height": 25.0,
-							"Left": 140.0,
+							"Left": 168,
 							"Top": 0.0,
 							"Visible": true,
-							"Width": 80.0,
+							"Width": 96,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -1274,10 +1270,10 @@
 							"TextMask": "0000000000",
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 75.0,
-							"Left": 95.0,
+							"Left": 114,
 							"Top": 15.0,
 							"Visible": false,
-							"Width": 175.0,
+							"Width": 210,
 							"Name": "Charge",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1312,10 +1308,10 @@
 								"BorderColor": "#FF000000"
 							},
 							"Height": 59.0,
-							"Left": 94.0,
+							"Left": 112.8,
 							"Top": 28.0,
 							"Visible": true,
-							"Width": 177.0,
+							"Width": 212.4,
 							"Name": "Charge Bar",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -1372,19 +1368,15 @@
 		"InGameScreensIndexs": [
 			0
 		],
-		"IdleScreensIndexs": [
-
-		],
+		"IdleScreensIndexs": [],
 		"MainPreviewIndex": 0,
 		"IsOverlay": false,
-		"Width": 275.0,
+		"Width": 330,
 		"Height": 300.0,
 		"OverlaySizeWarning": false,
 		"MetadataVersion": 2.0,
 		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": [
-
-		]
+		"PitScreensIndexs": []
 	},
 	"ShowOnScreenControls": true,
 	"IsOverlay": false,

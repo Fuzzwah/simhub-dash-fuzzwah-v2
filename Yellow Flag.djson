@@ -5,7 +5,7 @@
 	"Version": 2,
 	"Id": "ffa6b0a9-96a6-46dc-bbb4-afafb33c8528",
 	"BaseHeight": 70,
-	"BaseWidth": 520,
+	"BaseWidth": 624,
 	"BackgroundColor": "#FF000000",
 	"Screens": [
 		{
@@ -39,10 +39,10 @@
 					"VerticalAlignment": 1,
 					"BackgroundColor": "#FFFFD700",
 					"Height": 70.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 520.0,
+					"Width": 624,
 					"Name": "Background"
 				},
 				{
@@ -57,10 +57,10 @@
 					"VerticalAlignment": 1,
 					"BackgroundColor": "#00FFFFFF",
 					"Height": 70.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 520.0,
+					"Width": 624,
 					"Name": "Yellow",
 					"Bindings": {
 						"Visible": {
@@ -83,27 +83,21 @@
 	"BackgroundOpacity": 100.0,
 	"ShowBoundingRectangles": false,
 	"GridSize": 10,
-	"Images": [
-
-	],
+	"Images": [],
 	"Metadata": {
 		"ScreenCount": 1.0,
 		"InGameScreensIndexs": [
 			0
 		],
-		"IdleScreensIndexs": [
-
-		],
+		"IdleScreensIndexs": [],
 		"MainPreviewIndex": 0,
 		"IsOverlay": false,
-		"Width": 520.0,
+		"Width": 624,
 		"Height": 70.0,
 		"OverlaySizeWarning": false,
 		"MetadataVersion": 2.0,
 		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": [
-
-		]
+		"PitScreensIndexs": []
 	},
 	"ShowOnScreenControls": true,
 	"IsOverlay": false,

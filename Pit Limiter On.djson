@@ -5,7 +5,7 @@
 	"Version": 2,
 	"Id": "28e9c939-e8cd-4437-8c37-065be022cb61",
 	"BaseHeight": 70,
-	"BaseWidth": 520,
+	"BaseWidth": 624,
 	"BackgroundColor": "#FF000000",
 	"Screens": [
 		{
@@ -40,10 +40,10 @@
 					"VerticalAlignment": 1,
 					"BackgroundColor": "#FFFF00FF",
 					"Height": 70.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 520.0,
+					"Width": 624,
 					"Name": "Background"
 				},
 				{
@@ -58,12 +58,12 @@
 					"VerticalAlignment": 0,
 					"BackgroundColor": "#00FFFFFF",
 					"Height": 70.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 0.0,
 					"Visible": true,
 					"BlinkDelay": 500.0,
 					"BlinkEnabled": true,
-					"Width": 520.0,
+					"Width": 624,
 					"Name": "Pit Limiter On"
 				}
 			]
@@ -77,27 +77,21 @@
 	"BackgroundOpacity": 100.0,
 	"ShowBoundingRectangles": false,
 	"GridSize": 10,
-	"Images": [
-
-	],
+	"Images": [],
 	"Metadata": {
 		"ScreenCount": 1.0,
 		"InGameScreensIndexs": [
 			0
 		],
-		"IdleScreensIndexs": [
-
-		],
+		"IdleScreensIndexs": [],
 		"MainPreviewIndex": 0,
 		"IsOverlay": false,
-		"Width": 520.0,
+		"Width": 624,
 		"Height": 70.0,
 		"OverlaySizeWarning": false,
 		"MetadataVersion": 2.0,
 		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": [
-
-		]
+		"PitScreensIndexs": []
 	},
 	"ShowOnScreenControls": true,
 	"IsOverlay": false,

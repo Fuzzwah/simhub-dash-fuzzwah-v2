@@ -1,16 +1,12 @@
 {
 	"Variables": {
-		"DashboardVariables": [
-
-		]
+		"DashboardVariables": []
 	},
-	"DashboardDebugManager": {
-
-	},
+	"DashboardDebugManager": {},
 	"Version": 2,
 	"Id": "b7a118e4-d0a7-4132-9b76-216761ddeb9d",
 	"BaseHeight": 195,
-	"BaseWidth": 275,
+	"BaseWidth": 330,
 	"BackgroundColor": "#FF000000",
 	"Screens": [
 		{
@@ -37,9 +33,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 0.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 95.0,
-					"Width": 275.0,
+					"Width": 330,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -70,10 +66,10 @@
 								}
 							},
 							"Height": 90.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 5.0,
 							"Visible": true,
-							"Width": 275.0,
+							"Width": 330,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -105,10 +101,10 @@
 							"VerticalAlignment": 1,
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 80.0,
-							"Left": 3.0,
+							"Left": 3.6,
 							"Top": 15.0,
 							"Visible": true,
-							"Width": 270.0,
+							"Width": 324,
 							"Name": "PTP Count",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -152,10 +148,10 @@
 								"BorderColor": "#FF008080"
 							},
 							"Height": 25.0,
-							"Left": 90.0,
+							"Left": 108,
 							"Top": 0.0,
 							"Visible": true,
-							"Width": 100.0,
+							"Width": 120,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -200,9 +196,9 @@
 				{
 					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
 					"Top": 100.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Height": 95.0,
-					"Width": 275.0,
+					"Width": 330,
 					"BackgroundColor": "#00FFFFFF",
 					"Childrens": [
 						{
@@ -217,10 +213,10 @@
 								"BorderRight": 4
 							},
 							"Height": 90.0,
-							"Left": 0.0,
+							"Left": 0,
 							"Top": 105.0,
 							"Visible": true,
-							"Width": 275.0,
+							"Width": 330,
 							"Name": "Background",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -236,10 +232,10 @@
 							"VerticalAlignment": 1,
 							"BackgroundColor": "#FF171717",
 							"Height": 25.0,
-							"Left": 81.0,
+							"Left": 97.2,
 							"Top": 100.0,
 							"Visible": true,
-							"Width": 100.0,
+							"Width": 120,
 							"Name": "Title",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0
@@ -255,10 +251,10 @@
 							"VerticalAlignment": 1,
 							"BackgroundColor": "#00FFFFFF",
 							"Height": 80.0,
-							"Left": 3.0,
+							"Left": 3.6,
 							"Top": 115.0,
 							"Visible": true,
-							"Width": 270.0,
+							"Width": 324,
 							"Name": "BB (Raw)",
 							"RenderingSkip": 0,
 							"MinimumRefreshIntervalMS": 0.0,
@@ -292,27 +288,21 @@
 	"BackgroundOpacity": 100.0,
 	"ShowBoundingRectangles": false,
 	"GridSize": 10,
-	"Images": [
-
-	],
+	"Images": [],
 	"Metadata": {
 		"ScreenCount": 1.0,
 		"InGameScreensIndexs": [
 			0
 		],
-		"IdleScreensIndexs": [
-
-		],
+		"IdleScreensIndexs": [],
 		"MainPreviewIndex": 0,
 		"IsOverlay": false,
-		"Width": 275.0,
+		"Width": 330,
 		"Height": 195.0,
 		"OverlaySizeWarning": false,
 		"MetadataVersion": 2.0,
 		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": [
-
-		]
+		"PitScreensIndexs": []
 	},
 	"ShowOnScreenControls": true,
 	"IsOverlay": false,

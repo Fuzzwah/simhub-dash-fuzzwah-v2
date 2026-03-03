@@ -1,12 +1,8 @@
 {
 	"Variables": {
-		"DashboardVariables": [
-
-		]
+		"DashboardVariables": []
 	},
-	"DashboardDebugManager": {
-
-	},
+	"DashboardDebugManager": {},
 	"Version": 2,
 	"Id": "ae93e6cf-a051-4941-8246-5e7d2ca1781f",
 	"BaseHeight": 200,
@@ -43,7 +39,7 @@
 					"AutoSize": false,
 					"GaugeImage": "RPM Bar multicoloured",
 					"GaugeColor": "#FF246FB7",
-					"AlternateGaugeColor": "#FF009600",
+					"AlternateGaugeColor": "#FF008000",
 					"UseAlternateStyle": false,
 					"Minimum": 0.0,
 					"Maximum": 30.0,
@@ -59,10 +55,10 @@
 						"BorderRight": 1
 					},
 					"Height": 50.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 150.0,
 					"Visible": true,
-					"Width": 960.0,
+					"Width": 960,
 					"Name": "Bar",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -86,10 +82,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 0.0,
+					"Left": 0,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Yellow 1",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -120,10 +116,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 100.0,
+					"Left": 120,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Yellow 2",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -154,10 +150,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 200.0,
+					"Left": 240,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Red 1",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -188,10 +184,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 300.0,
+					"Left": 360,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Red 2",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -222,10 +218,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 400.0,
+					"Left": 480,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Blue 1",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -256,10 +252,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 500.0,
+					"Left": 600,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Blue 2",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -290,10 +286,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 600.0,
+					"Left": 720,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Purple 1",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -324,10 +320,10 @@
 						"BorderRight": 2
 					},
 					"Height": 150.0,
-					"Left": 700.0,
+					"Left": 840,
 					"Top": 0.0,
 					"Visible": true,
-					"Width": 100.0,
+					"Width": 120,
 					"Name": "Purple 2",
 					"RenderingSkip": 0,
 					"MinimumRefreshIntervalMS": 0.0,
@@ -377,19 +373,15 @@
 		"InGameScreensIndexs": [
 			0
 		],
-		"IdleScreensIndexs": [
-
-		],
+		"IdleScreensIndexs": [],
 		"MainPreviewIndex": 0,
 		"IsOverlay": false,
-		"Width": 960.0,
+		"Width": 960,
 		"Height": 200.0,
 		"OverlaySizeWarning": false,
 		"MetadataVersion": 2.0,
 		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": [
-
-		]
+		"PitScreensIndexs": []
 	},
 	"ShowOnScreenControls": true,
 	"IsOverlay": false,
