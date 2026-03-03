@@ -1,1 +1,632 @@
-{"DashboardDebugManager":{},"Version":2,"Id":"cc6be609-4ee4-41b8-9d72-36ea164baae6","BaseHeight":70,"BaseWidth":624,"BackgroundColor":"#FF000000","Screens":[{"RenderingSkip":0,"Name":"Screen1","InGameScreen":true,"IdleScreen":false,"PitScreen":false,"ScreenId":"e18fb86d-9221-4163-8ea5-29468f3966a0","AllowOverlays":true,"IsForegroundLayer":false,"IsOverlayLayer":false,"OverlayTriggerExpression":{"Expression":""},"ScreenEnabledExpression":{"Expression":""},"OverlayMaxDuration":0,"OverlayMinDuration":0,"IsBackgroundLayer":false,"BackgroundColor":"#00FFFFFF","Items":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Engine Off.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Engine Off","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if(isnull([SerialDashPlugin.ComputedRPMPercent],100)<5,1,0)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Finish Flag.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Finish Flag","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"[DataCorePlugin.GameData.NewData.Flag_Checkered]"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"High Water Temp.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"High Water Temp","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"isincreasing(4000,[DataCorePlugin.GameData.NewData.WaterTemperature]>120)\r\n"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"High Oil Temp.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"High Oil Temp","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"isincreasing(4000,[DataCorePlugin.GameData.NewData.OilTemperature]>130)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Blue Flag.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Blue Flag","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if([DataCorePlugin.GameData.NewData.CurrentLap]<=1,0,\r\n\r\n[DataCorePlugin.GameData.NewData.Flag_Blue]>0)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Yellow Flag.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Yellow Flag","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"[DataCorePlugin.GameData.NewData.Flag_Yellow]>0"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Black Flag.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Black Flag","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if([DataCorePlugin.GameData.NewData.Flag_Black]=0,0,\r\n\r\nchanged(3000,[DataCorePlugin.GameData.NewData.CurrentLap]))"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Pit Limiter On.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Pit Limiter On","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if([DataCorePlugin.GameData.NewData.PitLimiterOn]=1,1,0)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins","Group":false,"Repetitions":0,"Childrens":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins","Group":false,"Repetitions":0,"Childrens":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"","TextColor":"#FFFFFFFF","HorizontalAlignment":2,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#FFFF0000","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":624,"Name":"Background","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"OPT","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":282,"Name":"Optional","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"00:00.00","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":288,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":336,"Name":"Optional","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Text":{"FormatString":"mm\\:ss\\.f","Formula":{"Expression":"secondstotimespan(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0))"},"Mode":2}}}],"Visible":true,"BlinkPhasisInverted":false,"Name":"Optional","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 && isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,\r\n\r\n!blink('test',5000,1),\r\n\r\nif(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0,1,0))\r\n"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins","Group":false,"Repetitions":0,"Childrens":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"","TextColor":"#FFFFFFFF","HorizontalAlignment":2,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#FFFF0000","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":960,"Name":"Background","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"REQ","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":282,"Name":"Required","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"00:00.00","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":288,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":336,"Name":"Mandatory","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Text":{"FormatString":"mm\\:ss\\.f","Formula":{"Expression":"secondstotimespan(isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0))"},"Mode":2}}}],"Visible":false,"BlinkPhasisInverted":false,"Name":"Required","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 && isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,\r\n\r\nblink('test',5000,1),\r\n\r\nif(isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,1,0))"},"Mode":2}}}],"Visible":false,"BlinkPhasisInverted":false,"Name":"Repairs","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 or\r\n\r\nisnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0\r\n"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins","Group":false,"Repetitions":0,"Childrens":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"","TextColor":"#FFFFFFFF","HorizontalAlignment":2,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#FFFF0000","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":624,"Name":"Background","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"TOW","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":282,"Name":"Tow Title","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"01:23.45","TextColor":"#FFFFFFFF","HorizontalAlignment":0,"VerticalAlignment":1,"TextMask":"0000000000","BackgroundColor":"#00FFFFFF","Height":70.0,"Left":288,"Top":0.0,"Visible":true,"BlinkPhasisInverted":false,"Width":336,"Name":"Tow Time","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Text":{"FormatString":"mm\\:ss","Formula":{"Expression":"secondstotimespan([DataCorePlugin.GameRawData.Telemetry.PlayerCarTowTime])"},"Mode":2}}}],"Visible":false,"BlinkPhasisInverted":false,"Name":"Tow Time","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if(isnull([DataCorePlugin.GameRawData.Telemetry.PlayerCarTowTime],0)>0,1,\r\n0)"},"Mode":2}}},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins","NextScreenCommand":0,"PreviousScreenCommand":0,"AutoSize":true,"FileName":"Engine Off.djson","InitialScreenIndex":0,"FreezePageChanges":false,"EnableScreenRolesAndActivation":false,"IgnoreSavedScreensEx":true,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":false,"BlinkPhasisInverted":false,"Width":624,"Name":"Start Screen","RenderingSkip":0,"MinimumRefreshIntervalMS":0.0,"Bindings":{"Visible":{"Formula":{"Expression":"if(changed(1000,[DataCorePlugin.GameData.NewData.TrackName]),\r\nchanged(1000,[DataCorePlugin.GameData.NewData.TrackName]),\r\nchanged(1000,[DataCorePlugin.GameData.NewData.SessionTypeName]))"},"Mode":2}}}],"MinimumRefreshIntervalMS":0.0}],"SnapToGrid":false,"HideLabels":false,"ShowForeground":true,"ForegroundOpacity":100.0,"ShowBackground":true,"BackgroundOpacity":100.0,"ShowBoundingRectangles":false,"GridSize":10,"Images":[],"Metadata":{"ScreenCount":1.0,"InGameScreensIndexs":[0],"IdleScreensIndexs":[],"MainPreviewIndex":0,"IsOverlay":false,"OverlaySizeWarning":false,"MetadataVersion":2.0,"EnableOnDashboardMessaging":true,"PitScreensIndexs":[],"SimHubVersion":"9.11.3","Width":624,"Height":70.0,"DashboardVersion":""},"ShowOnScreenControls":true,"IsOverlay":false,"EnableClickThroughOverlay":true,"EnableOnDashboardMessaging":true,"UseStrictJSIsolation":false,"UseStrictJSIsolationWarning":true}
+{
+  "DashboardDebugManager": {},
+  "Version": 2,
+  "Id": "cc6be609-4ee4-41b8-9d72-36ea164baae6",
+  "BaseHeight": 70,
+  "BaseWidth": 624,
+  "BackgroundColor": "#FF000000",
+  "Screens": [
+    {
+      "RenderingSkip": 0,
+      "Name": "Screen1",
+      "InGameScreen": true,
+      "IdleScreen": false,
+      "PitScreen": false,
+      "ScreenId": "e18fb86d-9221-4163-8ea5-29468f3966a0",
+      "AllowOverlays": true,
+      "IsForegroundLayer": false,
+      "IsOverlayLayer": false,
+      "OverlayTriggerExpression": {
+        "Expression": ""
+      },
+      "ScreenEnabledExpression": {
+        "Expression": ""
+      },
+      "OverlayMaxDuration": 0,
+      "OverlayMinDuration": 0,
+      "IsBackgroundLayer": false,
+      "BackgroundColor": "#00FFFFFF",
+      "Items": [
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Engine Off.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Engine Off",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if(isnull([SerialDashPlugin.ComputedRPMPercent],100)<5,1,0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Finish Flag.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Finish Flag",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "[DataCorePlugin.GameData.NewData.Flag_Checkered]"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "High Water Temp.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "High Water Temp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "isincreasing(4000,[DataCorePlugin.GameData.NewData.WaterTemperature]>120)\r\n"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "High Oil Temp.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "High Oil Temp",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "isincreasing(4000,[DataCorePlugin.GameData.NewData.OilTemperature]>130)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Blue Flag.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Blue Flag",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if([DataCorePlugin.GameData.NewData.CurrentLap]<=1,0,\r\n\r\n[DataCorePlugin.GameData.NewData.Flag_Blue]>0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Yellow Flag.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Yellow Flag",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "[DataCorePlugin.GameData.NewData.Flag_Yellow]>0"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Black Flag.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Black Flag",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if([DataCorePlugin.GameData.NewData.Flag_Black]=0,0,\r\n\r\nchanged(3000,[DataCorePlugin.GameData.NewData.CurrentLap]))"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Pit Limiter On.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Pit Limiter On",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if([DataCorePlugin.GameData.NewData.PitLimiterOn]=1,1,0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+          "Group": false,
+          "Repetitions": 0,
+          "Childrens": [
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Group": false,
+              "Repetitions": 0,
+              "Childrens": [
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 2,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#FFFF0000",
+                  "Height": 70.0,
+                  "Left": 0,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 624,
+                  "Name": "Background",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "OPT",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 1,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#00FFFFFF",
+                  "Height": 70.0,
+                  "Left": 0,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 282,
+                  "Name": "Optional",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "00:00.00",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 1,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#00FFFFFF",
+                  "Height": 70.0,
+                  "Left": 288,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 336,
+                  "Name": "Optional",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0,
+                  "Bindings": {
+                    "Text": {
+                      "FormatString": "mm\\:ss\\.f",
+                      "Formula": {
+                        "Expression": "secondstotimespan(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0))"
+                      },
+                      "Mode": 2
+                    }
+                  }
+                }
+              ],
+              "Visible": true,
+              "BlinkPhasisInverted": false,
+              "Name": "Optional",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "Visible": {
+                  "Formula": {
+                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 && isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,\r\n\r\n!blink('test',5000,1),\r\n\r\nif(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0,1,0))\r\n"
+                  },
+                  "Mode": 2
+                }
+              }
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+              "Group": false,
+              "Repetitions": 0,
+              "Childrens": [
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 2,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#FFFF0000",
+                  "Height": 70.0,
+                  "Left": 0,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 960,
+                  "Name": "Background",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "REQ",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 1,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#00FFFFFF",
+                  "Height": 70.0,
+                  "Left": 0,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 282,
+                  "Name": "Required",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0
+                },
+                {
+                  "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+                  "IsTextItem": true,
+                  "Font": "B612",
+                  "FontWeight": "Bold",
+                  "FontSize": 60.0,
+                  "Text": "00:00.00",
+                  "TextColor": "#FFFFFFFF",
+                  "HorizontalAlignment": 1,
+                  "VerticalAlignment": 1,
+                  "TextMask": "0000000000",
+                  "BackgroundColor": "#00FFFFFF",
+                  "Height": 70.0,
+                  "Left": 288,
+                  "Top": 0.0,
+                  "Visible": true,
+                  "BlinkPhasisInverted": false,
+                  "Width": 336,
+                  "Name": "Mandatory",
+                  "RenderingSkip": 0,
+                  "MinimumRefreshIntervalMS": 0.0,
+                  "Bindings": {
+                    "Text": {
+                      "FormatString": "mm\\:ss\\.f",
+                      "Formula": {
+                        "Expression": "secondstotimespan(isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0))"
+                      },
+                      "Mode": 2
+                    }
+                  }
+                }
+              ],
+              "Visible": false,
+              "BlinkPhasisInverted": false,
+              "Name": "Required",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "Visible": {
+                  "Formula": {
+                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 && isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,\r\n\r\nblink('test',5000,1),\r\n\r\nif(isnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0,1,0))"
+                  },
+                  "Mode": 2
+                }
+              }
+            }
+          ],
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Name": "Repairs",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "isnull([DataCorePlugin.GameRawData.Telemetry.PitOptRepairLeft],0)>0 or\r\n\r\nisnull([DataCorePlugin.GameRawData.Telemetry.PitRepairLeft],0)>0\r\n"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+          "Group": false,
+          "Repetitions": 0,
+          "Childrens": [
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "FontSize": 60.0,
+              "Text": "",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 2,
+              "VerticalAlignment": 1,
+              "TextMask": "0000000000",
+              "BackgroundColor": "#FFFF0000",
+              "Height": 70.0,
+              "Left": 0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkPhasisInverted": false,
+              "Width": 624,
+              "Name": "Background",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "FontSize": 60.0,
+              "Text": "TOW",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "TextMask": "0000000000",
+              "BackgroundColor": "#00FFFFFF",
+              "Height": 70.0,
+              "Left": 0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkPhasisInverted": false,
+              "Width": 282,
+              "Name": "Tow Title",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "FontSize": 60.0,
+              "Text": "01:23.45",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 0,
+              "VerticalAlignment": 1,
+              "TextMask": "0000000000",
+              "BackgroundColor": "#00FFFFFF",
+              "Height": 70.0,
+              "Left": 288,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkPhasisInverted": false,
+              "Width": 336,
+              "Name": "Tow Time",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "Text": {
+                  "FormatString": "mm\\:ss",
+                  "Formula": {
+                    "Expression": "secondstotimespan([DataCorePlugin.GameRawData.Telemetry.PlayerCarTowTime])"
+                  },
+                  "Mode": 2
+                }
+              }
+            }
+          ],
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Name": "Tow Time",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.PlayerCarTowTime],0)>0,1,\r\n0)"
+              },
+              "Mode": 2
+            }
+          }
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.WidgetItem, SimHub.Plugins",
+          "NextScreenCommand": 0,
+          "PreviousScreenCommand": 0,
+          "AutoSize": true,
+          "FileName": "Engine Off.djson",
+          "InitialScreenIndex": 0,
+          "FreezePageChanges": false,
+          "EnableScreenRolesAndActivation": false,
+          "IgnoreSavedScreensEx": true,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": false,
+          "BlinkPhasisInverted": false,
+          "Width": 624,
+          "Name": "Start Screen",
+          "RenderingSkip": 0,
+          "MinimumRefreshIntervalMS": 0.0,
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "if(changed(1000,[DataCorePlugin.GameData.NewData.TrackName]),\r\nchanged(1000,[DataCorePlugin.GameData.NewData.TrackName]),\r\nchanged(1000,[DataCorePlugin.GameData.NewData.SessionTypeName]))"
+              },
+              "Mode": 2
+            }
+          }
+        }
+      ],
+      "MinimumRefreshIntervalMS": 0.0
+    }
+  ],
+  "SnapToGrid": false,
+  "HideLabels": false,
+  "ShowForeground": true,
+  "ForegroundOpacity": 100.0,
+  "ShowBackground": true,
+  "BackgroundOpacity": 100.0,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "Images": [],
+  "Metadata": {
+    "ScreenCount": 1.0,
+    "InGameScreensIndexs": [
+      0
+    ],
+    "IdleScreensIndexs": [],
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": [],
+    "SimHubVersion": "9.11.3",
+    "Width": 624,
+    "Height": 70.0,
+    "DashboardVersion": ""
+  },
+  "ShowOnScreenControls": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true,
+  "UseStrictJSIsolation": false,
+  "UseStrictJSIsolationWarning": true
+}

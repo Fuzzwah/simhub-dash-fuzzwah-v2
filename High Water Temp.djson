@@ -1,1 +1,107 @@
-{"DashboardDebugManager":{"Maximized":false},"Version":2,"Id":"1960916b-2e9f-4b5c-ab6f-87fd6bd18d18","BaseHeight":70,"BaseWidth":624,"BackgroundColor":"#FF000000","Screens":[{"Name":"Screen1","InGameScreen":true,"IdleScreen":false,"PitScreen":false,"ScreenId":"2d3ce4dd-d003-46a7-bf2d-68a4a492d1a0","AllowOverlays":true,"IsForegroundLayer":false,"IsOverlayLayer":false,"OverlayTriggerExpression":{"Expression":""},"ScreenEnabledExpression":{"Expression":""},"OverlayMaxDuration":0,"OverlayMinDuration":0,"IsBackgroundLayer":false,"BackgroundColor":"#FF000000","Items":[{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"","TextColor":"#FF000000","HorizontalAlignment":1,"VerticalAlignment":1,"BackgroundColor":"#FFFF0000","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"Width":624,"Name":"Background"},{"$type":"SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins","IsTextItem":true,"Font":"B612","FontWeight":"Bold","FontSize":60.0,"Text":"WATER TEMP","TextColor":"#FFFFFFFF","HorizontalAlignment":1,"VerticalAlignment":1,"BackgroundColor":"#00FFFFFF","Height":70.0,"Left":0,"Top":0.0,"Visible":true,"Width":624,"Name":"WATER TEMP","Bindings":{"Visible":{"Formula":{"Expression":"blink(EngineOff,500,1)"},"Mode":2,"TargetPropertyName":"Visible"}}}]}],"SnapToGrid":false,"HideLabels":false,"ShowForeground":true,"ForegroundOpacity":100.0,"ShowBackground":true,"BackgroundOpacity":100.0,"ShowBoundingRectangles":false,"GridSize":10,"Images":[],"Metadata":{"ScreenCount":1.0,"InGameScreensIndexs":[0],"IdleScreensIndexs":[],"MainPreviewIndex":0,"IsOverlay":false,"Width":624,"Height":70.0,"OverlaySizeWarning":false,"MetadataVersion":2.0,"EnableOnDashboardMessaging":true,"PitScreensIndexs":[]},"ShowOnScreenControls":true,"IsOverlay":false,"EnableClickThroughOverlay":true,"EnableOnDashboardMessaging":true}
+{
+  "DashboardDebugManager": {
+    "Maximized": false
+  },
+  "Version": 2,
+  "Id": "1960916b-2e9f-4b5c-ab6f-87fd6bd18d18",
+  "BaseHeight": 70,
+  "BaseWidth": 624,
+  "BackgroundColor": "#FF000000",
+  "Screens": [
+    {
+      "Name": "Screen1",
+      "InGameScreen": true,
+      "IdleScreen": false,
+      "PitScreen": false,
+      "ScreenId": "2d3ce4dd-d003-46a7-bf2d-68a4a492d1a0",
+      "AllowOverlays": true,
+      "IsForegroundLayer": false,
+      "IsOverlayLayer": false,
+      "OverlayTriggerExpression": {
+        "Expression": ""
+      },
+      "ScreenEnabledExpression": {
+        "Expression": ""
+      },
+      "OverlayMaxDuration": 0,
+      "OverlayMinDuration": 0,
+      "IsBackgroundLayer": false,
+      "BackgroundColor": "#FF000000",
+      "Items": [
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "B612",
+          "FontWeight": "Bold",
+          "FontSize": 60.0,
+          "Text": "",
+          "TextColor": "#FF000000",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#FFFF0000",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": true,
+          "Width": 624,
+          "Name": "Background"
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+          "IsTextItem": true,
+          "Font": "B612",
+          "FontWeight": "Bold",
+          "FontSize": 60.0,
+          "Text": "WATER TEMP",
+          "TextColor": "#FFFFFFFF",
+          "HorizontalAlignment": 1,
+          "VerticalAlignment": 1,
+          "BackgroundColor": "#00FFFFFF",
+          "Height": 70.0,
+          "Left": 0,
+          "Top": 0.0,
+          "Visible": true,
+          "Width": 624,
+          "Name": "WATER TEMP",
+          "Bindings": {
+            "Visible": {
+              "Formula": {
+                "Expression": "blink(EngineOff,500,1)"
+              },
+              "Mode": 2,
+              "TargetPropertyName": "Visible"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "SnapToGrid": false,
+  "HideLabels": false,
+  "ShowForeground": true,
+  "ForegroundOpacity": 100.0,
+  "ShowBackground": true,
+  "BackgroundOpacity": 100.0,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "Images": [],
+  "Metadata": {
+    "ScreenCount": 1.0,
+    "InGameScreensIndexs": [
+      0
+    ],
+    "IdleScreensIndexs": [],
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "Width": 624,
+    "Height": 70.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": []
+  },
+  "ShowOnScreenControls": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
+}

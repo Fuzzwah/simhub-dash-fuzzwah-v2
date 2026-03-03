@@ -1,311 +1,311 @@
 {
-	"Variables": {
-		"DashboardVariables": []
-	},
-	"DashboardDebugManager": {},
-	"Version": 2,
-	"Id": "b7a118e4-d0a7-4132-9b76-216761ddeb9d",
-	"BaseHeight": 195,
-	"BaseWidth": 330,
-	"BackgroundColor": "#FF000000",
-	"Screens": [
-		{
-			"RenderingSkip": 0,
-			"Name": "Left Page - SF",
-			"InGameScreen": true,
-			"IdleScreen": false,
-			"PitScreen": false,
-			"ScreenId": "75c01ccc-8a56-449e-82b5-95203622a83d",
-			"AllowOverlays": true,
-			"IsForegroundLayer": false,
-			"IsOverlayLayer": false,
-			"OverlayTriggerExpression": {
-				"Expression": ""
-			},
-			"ScreenEnabledExpression": {
-				"Expression": ""
-			},
-			"OverlayMaxDuration": 0,
-			"OverlayMinDuration": 0,
-			"IsBackgroundLayer": false,
-			"BackgroundColor": "#00FFFFFF",
-			"Items": [
-				{
-					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
-					"Top": 0.0,
-					"Left": 0,
-					"Height": 95.0,
-					"Width": 330,
-					"BackgroundColor": "#00FFFFFF",
-					"Childrens": [
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
-							"IsRectangleItem": true,
-							"BackgroundColor": "#FF171717",
-							"BorderStyle": {
-								"BorderColor": "#FF1E90FF",
-								"BorderTop": 4,
-								"BorderBottom": 4,
-								"BorderLeft": 4,
-								"BorderRight": 4,
-								"Bindings": {
-									"BorderColor": {
-										"Formula": {
-											"Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-										},
-										"StartColor": "#FF1E90FF",
-										"EnableMiddleColor": false,
-										"MiddleColor": "#FF000000",
-										"MiddleColorValue": 1.0,
-										"EndColor": "#FFFFFFFF",
-										"StartColorValue": 0.0,
-										"EndColorValue": 1.0,
-										"Mode": 4,
-										"TargetPropertyName": "BorderColor"
-									}
-								}
-							},
-							"Height": 90.0,
-							"Left": 0,
-							"Top": 5.0,
-							"Visible": true,
-							"Width": 330,
-							"Name": "Background",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0,
-							"Bindings": {
-								"BackgroundColor": {
-									"Formula": {
-										"Expression": "if(isnull([IRacingExtraProperties.iRacing_PushToPassActive],False),1,\r\n0)"
-									},
-									"StartColor": "#FF171717",
-									"EnableMiddleColor": false,
-									"MiddleColor": "#FF000000",
-									"MiddleColorValue": 1.0,
-									"EndColor": "#FF1E90FF",
-									"StartColorValue": 0.0,
-									"EndColorValue": 1.0,
-									"Mode": 4,
-									"TargetPropertyName": "BackgroundColor"
-								}
-							}
-						},
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-							"IsTextItem": true,
-							"Font": "Prezident",
-							"FontSize": 60.0,
-							"Text": "8",
-							"TextColor": "#FFFFFFFF",
-							"HorizontalAlignment": 1,
-							"VerticalAlignment": 1,
-							"BackgroundColor": "#00FFFFFF",
-							"Height": 80.0,
-							"Left": 3.6,
-							"Top": 15.0,
-							"Visible": true,
-							"Width": 324,
-							"Name": "PTP Count",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0,
-							"Bindings": {
-								"Text": {
-									"FormatString": "0",
-									"Formula": {
-										"Expression": "[IRacingExtraProperties.iRacing_PushToPassCount]"
-									},
-									"Mode": 2,
-									"TargetPropertyName": "Text"
-								},
-								"TextColor": {
-									"Formula": {
-										"Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-									},
-									"StartColor": "#FFAFEEEE",
-									"EnableMiddleColor": false,
-									"MiddleColor": "#FF000000",
-									"MiddleColorValue": 1.0,
-									"EndColor": "#FFFFFFFF",
-									"StartColorValue": 0.0,
-									"EndColorValue": 1.0,
-									"Mode": 4,
-									"TargetPropertyName": "TextColor"
-								}
-							}
-						},
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-							"IsTextItem": true,
-							"Font": "B612",
-							"FontWeight": "Bold",
-							"FontSize": 18.0,
-							"Text": "PTP Count",
-							"TextColor": "#FF1E90FF",
-							"HorizontalAlignment": 1,
-							"VerticalAlignment": 1,
-							"BackgroundColor": "#FF171717",
-							"BorderStyle": {
-								"BorderColor": "#FF008080"
-							},
-							"Height": 25.0,
-							"Left": 108,
-							"Top": 0.0,
-							"Visible": true,
-							"Width": 120,
-							"Name": "Title",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0,
-							"Bindings": {
-								"BackgroundColor": {
-									"Formula": {
-										"Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
-									},
-									"StartColor": "#FF171717",
-									"EnableMiddleColor": false,
-									"MiddleColor": "#FF000000",
-									"MiddleColorValue": 1.0,
-									"EndColor": "#FF1E90FF",
-									"StartColorValue": 0.0,
-									"EndColorValue": 1.0,
-									"Mode": 4,
-									"TargetPropertyName": "BackgroundColor"
-								},
-								"TextColor": {
-									"Formula": {
-										"Expression": "if(isnull([IRacingExtraProperties.iRacing_PushToPassActive],False),1,\r\n0)"
-									},
-									"StartColor": "#FF1E90FF",
-									"EnableMiddleColor": false,
-									"MiddleColor": "#FF000000",
-									"MiddleColorValue": 1.0,
-									"EndColor": "#FFFFFFFF",
-									"StartColorValue": 0.0,
-									"EndColorValue": 1.0,
-									"Mode": 4,
-									"TargetPropertyName": "TextColor"
-								}
-							}
-						}
-					],
-					"Group": false,
-					"Visible": true,
-					"Name": "DRS",
-					"RenderingSkip": 10,
-					"MinimumRefreshIntervalMS": 100.0
-				},
-				{
-					"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
-					"Top": 100.0,
-					"Left": 0,
-					"Height": 95.0,
-					"Width": 330,
-					"BackgroundColor": "#00FFFFFF",
-					"Childrens": [
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
-							"IsRectangleItem": true,
-							"BackgroundColor": "#FF171717",
-							"BorderStyle": {
-								"BorderColor": "#FFDA70D6",
-								"BorderTop": 4,
-								"BorderBottom": 4,
-								"BorderLeft": 4,
-								"BorderRight": 4
-							},
-							"Height": 90.0,
-							"Left": 0,
-							"Top": 105.0,
-							"Visible": true,
-							"Width": 330,
-							"Name": "Background",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0
-						},
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-							"IsTextItem": true,
-							"Font": "B612",
-							"FontSize": 18.0,
-							"Text": "Brake Bias",
-							"TextColor": "#FFDA70D6",
-							"HorizontalAlignment": 1,
-							"VerticalAlignment": 1,
-							"BackgroundColor": "#FF171717",
-							"Height": 25.0,
-							"Left": 97.2,
-							"Top": 100.0,
-							"Visible": true,
-							"Width": 120,
-							"Name": "Title",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0
-						},
-						{
-							"$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
-							"IsTextItem": true,
-							"Font": "Prezident",
-							"FontSize": 60.0,
-							"Text": "55.5",
-							"TextColor": "#FFD8BFD8",
-							"HorizontalAlignment": 1,
-							"VerticalAlignment": 1,
-							"BackgroundColor": "#00FFFFFF",
-							"Height": 80.0,
-							"Left": 3.6,
-							"Top": 115.0,
-							"Visible": true,
-							"Width": 324,
-							"Name": "BB (Raw)",
-							"RenderingSkip": 0,
-							"MinimumRefreshIntervalMS": 0.0,
-							"Bindings": {
-								"Text": {
-									"FormatString": "0.0",
-									"Formula": {
-										"Expression": "[DataCorePlugin.GameData.NewData.BrakeBias]\r\n"
-									},
-									"Mode": 2,
-									"TargetPropertyName": "Text"
-								}
-							}
-						}
-					],
-					"Group": false,
-					"Visible": true,
-					"Name": "Brake Bias",
-					"RenderingSkip": 50,
-					"MinimumRefreshIntervalMS": 500.0
-				}
-			],
-			"MinimumRefreshIntervalMS": 0.0
-		}
-	],
-	"SnapToGrid": true,
-	"HideLabels": true,
-	"ShowForeground": true,
-	"ForegroundOpacity": 100.0,
-	"ShowBackground": true,
-	"BackgroundOpacity": 100.0,
-	"ShowBoundingRectangles": false,
-	"GridSize": 10,
-	"Images": [],
-	"Metadata": {
-		"ScreenCount": 1.0,
-		"InGameScreensIndexs": [
-			0
-		],
-		"IdleScreensIndexs": [],
-		"MainPreviewIndex": 0,
-		"IsOverlay": false,
-		"Width": 330,
-		"Height": 195.0,
-		"OverlaySizeWarning": false,
-		"MetadataVersion": 2.0,
-		"EnableOnDashboardMessaging": true,
-		"PitScreensIndexs": []
-	},
-	"ShowOnScreenControls": true,
-	"IsOverlay": false,
-	"EnableClickThroughOverlay": true,
-	"EnableOnDashboardMessaging": true
+  "Variables": {
+    "DashboardVariables": []
+  },
+  "DashboardDebugManager": {},
+  "Version": 2,
+  "Id": "b7a118e4-d0a7-4132-9b76-216761ddeb9d",
+  "BaseHeight": 195,
+  "BaseWidth": 330,
+  "BackgroundColor": "#FF000000",
+  "Screens": [
+    {
+      "RenderingSkip": 0,
+      "Name": "Left Page - SF",
+      "InGameScreen": true,
+      "IdleScreen": false,
+      "PitScreen": false,
+      "ScreenId": "75c01ccc-8a56-449e-82b5-95203622a83d",
+      "AllowOverlays": true,
+      "IsForegroundLayer": false,
+      "IsOverlayLayer": false,
+      "OverlayTriggerExpression": {
+        "Expression": ""
+      },
+      "ScreenEnabledExpression": {
+        "Expression": ""
+      },
+      "OverlayMaxDuration": 0,
+      "OverlayMinDuration": 0,
+      "IsBackgroundLayer": false,
+      "BackgroundColor": "#00FFFFFF",
+      "Items": [
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+          "Top": 0.0,
+          "Left": 0,
+          "Height": 95.0,
+          "Width": 330,
+          "BackgroundColor": "#00FFFFFF",
+          "Childrens": [
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "BackgroundColor": "#FF171717",
+              "BorderStyle": {
+                "BorderColor": "#FF1E90FF",
+                "BorderTop": 4,
+                "BorderBottom": 4,
+                "BorderLeft": 4,
+                "BorderRight": 4,
+                "Bindings": {
+                  "BorderColor": {
+                    "Formula": {
+                      "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
+                    },
+                    "StartColor": "#FF1E90FF",
+                    "EnableMiddleColor": false,
+                    "MiddleColor": "#FF000000",
+                    "MiddleColorValue": 1.0,
+                    "EndColor": "#FFFFFFFF",
+                    "StartColorValue": 0.0,
+                    "EndColorValue": 1.0,
+                    "Mode": 4,
+                    "TargetPropertyName": "BorderColor"
+                  }
+                }
+              },
+              "Height": 90.0,
+              "Left": 0,
+              "Top": 5.0,
+              "Visible": true,
+              "Width": 330,
+              "Name": "Background",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "BackgroundColor": {
+                  "Formula": {
+                    "Expression": "if(isnull([IRacingExtraProperties.iRacing_PushToPassActive],False),1,\r\n0)"
+                  },
+                  "StartColor": "#FF171717",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FF1E90FF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                }
+              }
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "Prezident",
+              "FontSize": 60.0,
+              "Text": "8",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#00FFFFFF",
+              "Height": 80.0,
+              "Left": 3.6,
+              "Top": 15.0,
+              "Visible": true,
+              "Width": 324,
+              "Name": "PTP Count",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "Text": {
+                  "FormatString": "0",
+                  "Formula": {
+                    "Expression": "[IRacingExtraProperties.iRacing_PushToPassCount]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "Formula": {
+                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
+                  },
+                  "StartColor": "#FFAFEEEE",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFFFFFF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "B612",
+              "FontWeight": "Bold",
+              "FontSize": 18.0,
+              "Text": "PTP Count",
+              "TextColor": "#FF1E90FF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#FF171717",
+              "BorderStyle": {
+                "BorderColor": "#FF008080"
+              },
+              "Height": 25.0,
+              "Left": 108,
+              "Top": 0.0,
+              "Visible": true,
+              "Width": 120,
+              "Name": "Title",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "BackgroundColor": {
+                  "Formula": {
+                    "Expression": "if(isnull([DataCorePlugin.GameRawData.Telemetry.DRS_Status],0)>1,1,\r\n0)"
+                  },
+                  "StartColor": "#FF171717",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FF1E90FF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "BackgroundColor"
+                },
+                "TextColor": {
+                  "Formula": {
+                    "Expression": "if(isnull([IRacingExtraProperties.iRacing_PushToPassActive],False),1,\r\n0)"
+                  },
+                  "StartColor": "#FF1E90FF",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFFFFFFF",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            }
+          ],
+          "Group": false,
+          "Visible": true,
+          "Name": "DRS",
+          "RenderingSkip": 10,
+          "MinimumRefreshIntervalMS": 100.0
+        },
+        {
+          "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.Layer, SimHub.Plugins",
+          "Top": 100.0,
+          "Left": 0,
+          "Height": 95.0,
+          "Width": 330,
+          "BackgroundColor": "#00FFFFFF",
+          "Childrens": [
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "BackgroundColor": "#FF171717",
+              "BorderStyle": {
+                "BorderColor": "#FFDA70D6",
+                "BorderTop": 4,
+                "BorderBottom": 4,
+                "BorderLeft": 4,
+                "BorderRight": 4
+              },
+              "Height": 90.0,
+              "Left": 0,
+              "Top": 105.0,
+              "Visible": true,
+              "Width": 330,
+              "Name": "Background",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "B612",
+              "FontSize": 18.0,
+              "Text": "Brake Bias",
+              "TextColor": "#FFDA70D6",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#FF171717",
+              "Height": 25.0,
+              "Left": 97.2,
+              "Top": 100.0,
+              "Visible": true,
+              "Width": 120,
+              "Name": "Title",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0
+            },
+            {
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "Font": "Prezident",
+              "FontSize": 60.0,
+              "Text": "55.5",
+              "TextColor": "#FFD8BFD8",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "BackgroundColor": "#00FFFFFF",
+              "Height": 80.0,
+              "Left": 3.6,
+              "Top": 115.0,
+              "Visible": true,
+              "Width": 324,
+              "Name": "BB (Raw)",
+              "RenderingSkip": 0,
+              "MinimumRefreshIntervalMS": 0.0,
+              "Bindings": {
+                "Text": {
+                  "FormatString": "0.0",
+                  "Formula": {
+                    "Expression": "[DataCorePlugin.GameData.NewData.BrakeBias]\r\n"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                }
+              }
+            }
+          ],
+          "Group": false,
+          "Visible": true,
+          "Name": "Brake Bias",
+          "RenderingSkip": 50,
+          "MinimumRefreshIntervalMS": 500.0
+        }
+      ],
+      "MinimumRefreshIntervalMS": 0.0
+    }
+  ],
+  "SnapToGrid": true,
+  "HideLabels": true,
+  "ShowForeground": true,
+  "ForegroundOpacity": 100.0,
+  "ShowBackground": true,
+  "BackgroundOpacity": 100.0,
+  "ShowBoundingRectangles": false,
+  "GridSize": 10,
+  "Images": [],
+  "Metadata": {
+    "ScreenCount": 1.0,
+    "InGameScreensIndexs": [
+      0
+    ],
+    "IdleScreensIndexs": [],
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "Width": 330,
+    "Height": 195.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": []
+  },
+  "ShowOnScreenControls": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
 }
